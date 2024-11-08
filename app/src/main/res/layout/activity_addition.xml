@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="2"
+    android:rowCount="4"
+    android:padding="16dp"
+    android:alignmentMode="alignMargins"
+    android:columnOrderPreserved="false"
+    android:gravity="center"
+    android:background="@color/background_color"
+    android:id="@+id/main">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="2"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="@string/menu_add"
+        android:textColor="@color/text_color"
+        android:textStyle="bold"
+        android:textSize="24sp" />
+
+    <!-- Addition -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="8dp"
+        android:background="@drawable/item_background_square"
+        android:layout_margin="8dp"
+        android:id="@+id/continuous_addition_button">
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_addition" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cong_lien_tiep"
+            android:textSize="18sp"
+            android:textColor="@color/text_color" />
+    </LinearLayout>
+
+    <!-- Subtraction -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="8dp"
+        android:background="@drawable/item_background_square"
+        android:layout_margin="8dp"
+        android:id="@+id/subtraction_button">
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_addition" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cong_mot_chu_so"
+            android:textSize="18sp"
+            android:textColor="@color/text_color" />
+    </LinearLayout>
+
+    <!-- Multiplication -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="8dp"
+        android:background="@drawable/item_background_square"
+        android:layout_margin="8dp"
+        android:id="@+id/multiplication_button">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_addition" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cong_hai_chu_so"
+            android:textSize="18sp"
+            android:textColor="@color/text_color" />
+    </LinearLayout>
+
+    <!-- Division -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="8dp"
+        android:background="@drawable/item_background_square"
+        android:layout_margin="8dp"
+        android:id="@+id/division_button">
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_addition" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cong_ba_chu_so"
+            android:textSize="18sp"
+            android:textColor="@color/text_color" />
+    </LinearLayout>
+
+    <!-- Compare -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="8dp"
+        android:background="@drawable/item_background_square"
+        android:layout_margin="8dp"
+        android:id="@+id/comparison_button">
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_addition" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cong_ba_so"
+            android:textSize="18sp"
+            android:textColor="@color/text_color" />
+    </LinearLayout>
+
+    <!-- Random -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="8dp"
+        android:background="@drawable/item_background_square"
+        android:layout_margin="8dp">
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_addition" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tim_so_con_thieu"
+            android:textSize="18sp"
+            android:textColor="@color/text_color" />
+    </LinearLayout>
+
+</GridLayout>

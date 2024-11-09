@@ -27,7 +27,9 @@
         <activity android:name=".divisions.DivisionActivity" />
         <activity android:name=".compares.ComparisonActivity" />
         <activity android:name=".additions.ContinuousAdditionActivity" />
+        <activity android:name=".random.RandomActivity" />
         <activity android:name=".ranks.RankActivity" />
+        <activity android:name=".settings.SettingsActivity" />
     </application>
 
 </manifest>

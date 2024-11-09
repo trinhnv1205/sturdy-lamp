@@ -17,7 +17,9 @@ import com.example.learnmath.compares.ComparisonActivity;
 import com.example.learnmath.divisions.DivisionActivity;
 import com.example.learnmath.entities.AppDatabase;
 import com.example.learnmath.multiplications.MultiplicationActivity;
+import com.example.learnmath.random.RandomActivity;
 import com.example.learnmath.ranks.RankActivity;
+import com.example.learnmath.settings.SettingsActivity;
 import com.example.learnmath.subtracts.SubtractionActivity;
 
 public class LearnMath extends AppCompatActivity {
@@ -77,12 +79,22 @@ public class LearnMath extends AppCompatActivity {
             }
         });
 
-        LinearLayout comparisonButton = findViewById(R.id.comparison_button);
+        LinearLayout comparisonButton = findViewById(R.id.compare_button);
         comparisonButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Start the ComparisonActivity
                 Intent intent = new Intent(LearnMath.this, ComparisonActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        LinearLayout randomButton = findViewById(R.id.random_button);
+        randomButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Start the RandomActivity
+                Intent intent = new Intent(LearnMath.this, RandomActivity.class);
                 startActivity(intent);
             }
         });
@@ -93,6 +105,16 @@ public class LearnMath extends AppCompatActivity {
             public void onClick(View v) {
                 // Start the RankActivity
                 Intent intent = new Intent(LearnMath.this, RankActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        LinearLayout settingsButton = findViewById(R.id.settings_button);
+        settingsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Start the RankActivity
+                Intent intent = new Intent(LearnMath.this, SettingsActivity.class);
                 startActivity(intent);
             }
         });

@@ -4,7 +4,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
+
+import com.example.learnmath.entities.AppDatabase;
+import com.example.learnmath.entities.User;
 
 public abstract class BaseQuizActivity extends AppCompatActivity {
 
@@ -15,11 +20,14 @@ public abstract class BaseQuizActivity extends AppCompatActivity {
     protected int score = 0;
     protected int questionCount = 0;
     protected Button answer1, answer2, answer3, answer4;
+    private AppDatabase database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutResourceId());
+
+        database = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "app_database").build();
 
         questionText = findViewById(R.id.question_text);
         feedbackText = findViewById(R.id.feedback_text);
@@ -80,8 +88,30 @@ public abstract class BaseQuizActivity extends AppCompatActivity {
             generateQuestion();
         } else {
             feedbackText.setText("Trò chơi kết thúc! Tổng điểm là: " + score);
+            saveScore();
             retryButton.setVisibility(View.VISIBLE);
             viewScoreButton.setVisibility(View.VISIBLE);
+        }
+    }
+
+    private void saveScore() {
+        new Thread(() -> {
+            User user = new User();
+            user.name = getRandomName();
+            user.score = score;
+            database.userDao().insert(user);
+        }).start();
+    }
+
+    private String getRandomName() {
+        int random = (int) (Math.random() * 3);
+        switch (random) {
+            case 1:
+                return "User";
+            case 2:
+                return "Guest";
+            default:
+                return "Player";
         }
     }
 

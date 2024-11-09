@@ -50,6 +50,7 @@ dependencies {
     implementation("androidx.compose.material:material-icons-extended:1.0.5")
 
     implementation ("androidx.room:room-runtime:2.4.2")
+    implementation(libs.androidx.preference)
     annotationProcessor ("androidx.room:room-compiler:2.4.2")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

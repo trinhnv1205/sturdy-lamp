@@ -125,7 +125,6 @@
         android:gravity="center">
         <!-- Compare -->
         <LinearLayout
-            android:id="@+id/comparison_button"
             android:layout_width="180dp"
             android:layout_height="150dp"
             android:layout_margin="8dp"
@@ -133,6 +132,7 @@
             android:background="@drawable/item_background_square"
             android:gravity="center"
             android:orientation="vertical"
+            android:id="@+id/compare_button"
             android:padding="8dp">
 
             <ImageView
@@ -157,6 +157,7 @@
             android:background="@drawable/item_background_square"
             android:gravity="center"
             android:orientation="vertical"
+            android:id="@+id/random_button"
             android:padding="8dp">
 
             <ImageView
@@ -186,6 +187,7 @@
             android:background="@drawable/item_background_square"
             android:gravity="center"
             android:orientation="vertical"
+            android:id="@+id/settings_button"
             android:padding="8dp">
 
             <ImageView

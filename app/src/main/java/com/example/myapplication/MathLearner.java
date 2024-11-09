@@ -24,7 +24,6 @@ public class MathLearner extends AppCompatActivity {
             return insets;
         });
 
-        // Find the addition button and set an OnClickListener
         LinearLayout additionButton = findViewById(R.id.addition_button);
         additionButton.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,171 +1,228 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:columnCount="2"
-    android:rowCount="4"
-    android:padding="16dp"
-    android:alignmentMode="alignMargins"
-    android:columnOrderPreserved="false"
-    android:gravity="center"
     android:background="@color/background_color"
-    android:id="@+id/main">
+    android:gravity="top|center"
+    android:orientation="vertical"
+    android:layout_marginTop="60sp"
+    android:padding="16dp">
 
-    <!-- Title -->
-    <TextView
-        android:layout_width="223dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_columnSpan="2"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:padding="16dp"
-        android:text="Học toán cùng bé"
-        android:textColor="@color/text_color"
-        android:textStyle="bold"
-        android:textSize="24sp" />
+        android:gravity="center">
+        <!-- Addition -->
+        <LinearLayout
+            android:id="@+id/addition_button"
+            android:layout_width="180dp"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/red_200"
+            android:background="@drawable/item_background_square"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp">
 
-    <!-- Addition -->
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:padding="8dp"
-        android:background="@drawable/item_background_square"
-        android:layout_margin="8dp"
-        android:id="@+id/addition_button">
-        <ImageView
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:src="@drawable/ic_addition" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/addition"
-            android:textSize="18sp"
-            android:textColor="@color/text_color" />
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_addition" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/addition"
+                android:textColor="@color/text_color"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <!-- Subtraction -->
+        <LinearLayout
+            android:id="@+id/subtraction_button"
+            android:layout_width="180dp"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/green_200"
+            android:background="@drawable/item_background_square"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_subtraction" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/subtraction"
+                android:textColor="@color/text_color"
+                android:textSize="18sp" />
+        </LinearLayout>
     </LinearLayout>
 
-    <!-- Subtraction -->
     <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:padding="8dp"
-        android:background="@drawable/item_background_square"
-        android:layout_margin="8dp"
-        android:id="@+id/subtraction_button">
-        <ImageView
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:src="@drawable/ic_subtraction" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/subtraction"
-            android:textSize="18sp"
-            android:textColor="@color/text_color" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <!-- Multiplication -->
+        <LinearLayout
+            android:id="@+id/multiplication_button"
+            android:layout_width="180dp"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/blue_200"
+            android:background="@drawable/item_background_square"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_multiplication" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/multiplication"
+                android:textColor="@color/text_color"
+                android:textSize="18sp" />
+        </LinearLayout>
+        <!-- Division -->
+        <LinearLayout
+            android:id="@+id/division_button"
+            android:layout_width="180dp"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/yellow_200"
+            android:background="@drawable/item_background_square"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_division" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/division"
+                android:textColor="@color/text_color"
+                android:textSize="18sp" />
+        </LinearLayout>
     </LinearLayout>
 
-    <!-- Multiplication -->
     <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:padding="8dp"
-        android:background="@drawable/item_background_square"
-        android:layout_margin="8dp"
-        android:id="@+id/multiplication_button">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <!-- Compare -->
+        <LinearLayout
+            android:id="@+id/comparison_button"
+            android:layout_width="180dp"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/purple_200"
+            android:background="@drawable/item_background_square"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp">
 
-        <ImageView
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:src="@drawable/ic_multiplication" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/multiplication"
-            android:textSize="18sp"
-            android:textColor="@color/text_color" />
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_compare" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/compare"
+                android:textColor="@color/text_color"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <!-- Random -->
+        <LinearLayout
+            android:layout_width="180dp"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/orange_200"
+            android:background="@drawable/item_background_square"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_random" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/random"
+                android:textColor="@color/text_color"
+                android:textSize="18sp" />
+        </LinearLayout>
     </LinearLayout>
 
-    <!-- Division -->
     <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:padding="8dp"
-        android:background="@drawable/item_background_square"
-        android:layout_margin="8dp"
-        android:id="@+id/division_button">
-        <ImageView
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:src="@drawable/ic_division" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Division"
-            android:textSize="18sp"
-            android:textColor="@color/text_color" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="180dp"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/green_200"
+            android:background="@drawable/item_background_square"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_settings" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings"
+                android:textColor="@color/text_color"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="180dp"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/blue_200"
+            android:background="@drawable/item_background_square"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_rank" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rank"
+                android:textColor="@color/text_color"
+                android:textSize="18sp" />
+        </LinearLayout>
     </LinearLayout>
 
-    <!-- Compare -->
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:padding="8dp"
-        android:background="@drawable/item_background_square"
-        android:layout_margin="8dp"
-        android:id="@+id/comparison_button">
-        <ImageView
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:src="@drawable/ic_compare" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/compare"
-            android:textSize="18sp"
-            android:textColor="@color/text_color" />
-    </LinearLayout>
-
-    <!-- Random -->
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:padding="8dp"
-        android:background="@drawable/item_background_square"
-        android:layout_margin="8dp">
-        <ImageView
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:src="@drawable/ic_random" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/random"
-            android:textSize="18sp"
-            android:textColor="@color/text_color" />
-    </LinearLayout>
-
-</GridLayout>
+</LinearLayout>

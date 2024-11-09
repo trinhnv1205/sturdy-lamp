@@ -6,7 +6,6 @@ import java.util.Random;
 
 public class ContinuousAdditionActivity extends BaseQuizActivity {
 
-    private int baseNumber = 1;
     private int currentAddend = 1;
 
     @Override
@@ -16,6 +15,7 @@ public class ContinuousAdditionActivity extends BaseQuizActivity {
 
     @Override
     protected void generateQuestion() {
+        int baseNumber = 1;
         correctAnswer = baseNumber + currentAddend;
         questionText.setText(baseNumber + " + " + currentAddend + " = ?");
 

@@ -5,14 +5,16 @@
     android:orientation="vertical"
     android:padding="16dp"
     android:background="@color/background_color"
-    android:gravity="center">
+    android:gravity="center"
+    android:layout_marginTop="60sp"
+    >
 
     <TextView
         android:id="@+id/question_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/question"
-        android:textSize="20sp"
+        android:textSize="32sp"
         android:textStyle="bold"
         android:padding="16dp"
         android:textColor="@color/text_primary"
@@ -28,46 +30,58 @@
         <Button
             android:id="@+id/answer1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
+            android:layout_height="100dp"
             android:layout_rowWeight="1"
-            android:text="Answer 1"
+            android:layout_columnWeight="1"
+            android:text="@string/answer"
+            android:backgroundTint="@color/answer_button"
             android:textColor="@color/text_secondary"
-            android:backgroundTint="@color/accent_color"
-            android:gravity="center" />
+            android:gravity="center"
+            android:textSize="15sp"
+            android:layout_margin="10dp"
+            />
 
         <Button
             android:id="@+id/answer2"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:text="Answer 2"
+            android:text="@string/answer"
             android:textColor="@color/text_secondary"
-            android:backgroundTint="@color/accent_color"
-            android:gravity="center" />
+            android:backgroundTint="@color/answer_button"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:layout_margin="10dp"
+            />
 
         <Button
             android:id="@+id/answer3"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:text="Answer 3"
+            android:text="@string/answer"
             android:textColor="@color/text_secondary"
-            android:backgroundTint="@color/accent_color"
-            android:gravity="center" />
+            android:backgroundTint="@color/answer_button"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:layout_margin="10dp"
+            />
 
         <Button
             android:id="@+id/answer4"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:text="Answer 4"
+            android:text="@string/answer"
             android:textColor="@color/text_secondary"
-            android:backgroundTint="@color/accent_color"
-            android:gravity="center" />
+            android:backgroundTint="@color/answer_button"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:layout_margin="10dp"
+            />
     </GridLayout>
 
     <Button
@@ -76,22 +90,7 @@
         android:layout_height="wrap_content"
         android:text="@string/retry"
         android:textColor="@color/white"
-        android:backgroundTint="@color/accent_color"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:padding="12dp"
-        android:layout_gravity="center"
-        android:fontFamily="sans-serif-medium"
-        android:background="@drawable/rounded_button"
-        android:visibility="gone" />
-
-    <Button
-        android:id="@+id/reset_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/reset"
-        android:textColor="@color/white"
-        android:backgroundTint="@color/accent_color"
+        android:backgroundTint="@color/green_200"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:padding="12dp"
@@ -106,7 +105,7 @@
         android:layout_height="wrap_content"
         android:text="@string/view_score"
         android:textColor="@color/white"
-        android:backgroundTint="@color/accent_color"
+        android:backgroundTint="@color/green_200"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:padding="12dp"

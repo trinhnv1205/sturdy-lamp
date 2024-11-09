@@ -2,7 +2,8 @@
     <string name="app_name">Học toán cùng bé</string>
     <string name="addition">Phép cộng</string>
     <string name="subtraction">Phép trừ</string>
-    <string name="multiplication">Phép nhân\n</string>
+    <string name="multiplication">Phép nhân</string>
+    <string name="division">Phép chia</string>
     <string name="compare">Phép so sánh</string>
     <string name="random">Ngẫu nhiên</string>
     <string name="question">Câu hỏi</string>
@@ -17,4 +18,7 @@
     <string name="cong_hai_chu_so">Cộng 2 chữ số</string>
     <string name="cong_ba_so">Cộng 3 số</string>
     <string name="tim_so_con_thieu">Tìm số còn thiếu</string>
+    <string name="settings">Cài đặt</string>
+    <string name="rank">Xếp hạng</string>
+    <string name="answer">Câu trả lời</string>
 </resources>

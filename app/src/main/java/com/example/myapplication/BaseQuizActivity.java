@@ -10,7 +10,7 @@ public abstract class BaseQuizActivity extends AppCompatActivity {
 
     protected TextView questionText;
     protected TextView feedbackText;
-    protected Button retryButton, resetButton, viewScoreButton;
+    protected Button retryButton, viewScoreButton;
     protected int correctAnswer;
     protected int score = 0;
     protected int questionCount = 0;
@@ -24,7 +24,6 @@ public abstract class BaseQuizActivity extends AppCompatActivity {
         questionText = findViewById(R.id.question_text);
         feedbackText = findViewById(R.id.feedback_text);
         retryButton = findViewById(R.id.retry_button);
-        resetButton = findViewById(R.id.reset_button);
         viewScoreButton = findViewById(R.id.view_score_button);
 
         // Initialize the Buttons
@@ -54,13 +53,6 @@ public abstract class BaseQuizActivity extends AppCompatActivity {
             }
         });
 
-        resetButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                resetQuiz();
-            }
-        });
-
         viewScoreButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,7 +70,7 @@ public abstract class BaseQuizActivity extends AppCompatActivity {
 
         if (selectedAnswer == correctAnswer) {
             score++;
-            feedbackText.setText("Đúng rồi!");
+            feedbackText.setText("Chính xác!");
         } else {
             feedbackText.setText("Sai rồi!");
         }
@@ -89,7 +81,6 @@ public abstract class BaseQuizActivity extends AppCompatActivity {
         } else {
             feedbackText.setText("Trò chơi kết thúc! Tổng điểm là: " + score);
             retryButton.setVisibility(View.VISIBLE);
-            resetButton.setVisibility(View.VISIBLE);
             viewScoreButton.setVisibility(View.VISIBLE);
         }
     }
@@ -99,17 +90,6 @@ public abstract class BaseQuizActivity extends AppCompatActivity {
         questionCount = 0;
         feedbackText.setText("");
         retryButton.setVisibility(View.GONE);
-        resetButton.setVisibility(View.GONE);
-        viewScoreButton.setVisibility(View.GONE);
-        generateQuestion();
-    }
-
-    protected void resetQuiz() {
-        score = 0;
-        questionCount = 0;
-        feedbackText.setText("");
-        retryButton.setVisibility(View.GONE);
-        resetButton.setVisibility(View.GONE);
         viewScoreButton.setVisibility(View.GONE);
         generateQuestion();
     }

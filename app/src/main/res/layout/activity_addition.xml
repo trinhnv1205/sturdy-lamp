@@ -5,8 +5,8 @@
     android:orientation="vertical"
     android:padding="16dp"
     android:background="@color/background_color"
-    android:gravity="top|center"
-    android:layout_marginTop="60sp"
+    android:gravity="center"
+
     >
 
     <LinearLayout

@@ -1,14 +1,17 @@
-package com.example.myapplication;
+package com.example.learnmath.subtracts;
 
 import android.widget.Button;
 
+import com.example.learnmath.BaseQuizActivity;
+import com.example.learnmath.R;
+
 import java.util.Random;
 
-public class DivisionActivity extends BaseQuizActivity {
+public class SubtractionActivity extends BaseQuizActivity {
 
     @Override
     protected int getLayoutResourceId() {
-        return R.layout.activity_division;
+        return R.layout.activity_quiz;
     }
 
     @Override
@@ -16,8 +19,8 @@ public class DivisionActivity extends BaseQuizActivity {
         Random random = new Random();
         int num1 = random.nextInt(10) + 1;
         int num2 = random.nextInt(10) + 1;
-        correctAnswer = num1 / num2;
-        questionText.setText(num1 + " / " + num2 + " = ?");
+        correctAnswer = num1 - num2;
+        questionText.setText(num1 + " - " + num2 + " = ?");
 
         int correctPosition = random.nextInt(4);
         Button[] buttons = {answer1, answer2, answer3, answer4};
@@ -27,7 +30,7 @@ public class DivisionActivity extends BaseQuizActivity {
             } else {
                 int wrongAnswer;
                 do {
-                    wrongAnswer = random.nextInt(10) + 1;
+                    wrongAnswer = random.nextInt(20) - 10;
                 } while (wrongAnswer == correctAnswer);
                 buttons[i].setText(String.valueOf(wrongAnswer));
             }

@@ -1,6 +1,9 @@
-package com.example.myapplication;
+package com.example.learnmath.multiplications;
 
 import android.widget.Button;
+
+import com.example.learnmath.BaseQuizActivity;
+import com.example.learnmath.R;
 
 import java.util.Random;
 
@@ -8,7 +11,7 @@ public class MultiplicationActivity extends BaseQuizActivity {
 
     @Override
     protected int getLayoutResourceId() {
-        return R.layout.activity_multiplication;
+        return R.layout.activity_quiz;
     }
 
     @Override

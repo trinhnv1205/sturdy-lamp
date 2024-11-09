@@ -13,7 +13,7 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name=".MathLearner"
+            android:name=".LearnMath"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,12 +21,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AdditionActivity" />
-        <activity android:name=".SubtractionActivity" />
-        <activity android:name=".MultiplicationActivity" />
-        <activity android:name=".DivisionActivity" />
-        <activity android:name=".ComparisonActivity" />
-        <activity android:name=".ContinuousAdditionActivity" />
+        <activity android:name=".additions.AdditionActivity" />
+        <activity android:name=".subtracts.SubtractionActivity" />
+        <activity android:name=".multiplications.MultiplicationActivity" />
+        <activity android:name=".divisions.DivisionActivity" />
+        <activity android:name=".compares.ComparisonActivity" />
+        <activity android:name=".additions.ContinuousAdditionActivity" />
+        <activity android:name=".ranks.RankActivity" />
     </application>
 
 </manifest>

@@ -209,6 +209,7 @@
             android:background="@drawable/item_background_square"
             android:gravity="center"
             android:orientation="vertical"
+            android:id="@+id/rank_button"
             android:padding="8dp">
 
             <ImageView

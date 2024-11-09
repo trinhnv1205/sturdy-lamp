@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.learnmath;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,14 +10,27 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.room.Room;
 
-public class MathLearner extends AppCompatActivity {
+import com.example.learnmath.additions.AdditionActivity;
+import com.example.learnmath.compares.ComparisonActivity;
+import com.example.learnmath.divisions.DivisionActivity;
+import com.example.learnmath.entities.AppDatabase;
+import com.example.learnmath.multiplications.MultiplicationActivity;
+import com.example.learnmath.ranks.RankActivity;
+import com.example.learnmath.subtracts.SubtractionActivity;
+
+public class LearnMath extends AppCompatActivity {
+    private static AppDatabase database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_math_learner);
+
+        database = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "app_database").build();
+
+        setContentView(R.layout.activity_learn_math);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -29,7 +42,7 @@ public class MathLearner extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Start the AdditionActivity
-                Intent intent = new Intent(MathLearner.this, AdditionActivity.class);
+                Intent intent = new Intent(LearnMath.this, AdditionActivity.class);
                 startActivity(intent);
             }
         });
@@ -39,7 +52,7 @@ public class MathLearner extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Start the SubtractionActivity
-                Intent intent = new Intent(MathLearner.this, SubtractionActivity.class);
+                Intent intent = new Intent(LearnMath.this, SubtractionActivity.class);
                 startActivity(intent);
             }
         });
@@ -49,7 +62,7 @@ public class MathLearner extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Start the MultiplicationActivity
-                Intent intent = new Intent(MathLearner.this, MultiplicationActivity.class);
+                Intent intent = new Intent(LearnMath.this, MultiplicationActivity.class);
                 startActivity(intent);
             }
         });
@@ -59,7 +72,7 @@ public class MathLearner extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Start the DivisionActivity
-                Intent intent = new Intent(MathLearner.this, DivisionActivity.class);
+                Intent intent = new Intent(LearnMath.this, DivisionActivity.class);
                 startActivity(intent);
             }
         });
@@ -69,11 +82,23 @@ public class MathLearner extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Start the ComparisonActivity
-                Intent intent = new Intent(MathLearner.this, ComparisonActivity.class);
+                Intent intent = new Intent(LearnMath.this, ComparisonActivity.class);
                 startActivity(intent);
             }
         });
 
+        LinearLayout rankButton = findViewById(R.id.rank_button);
+        rankButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Start the RankActivity
+                Intent intent = new Intent(LearnMath.this, RankActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
 
+    public static AppDatabase getDatabase() {
+        return database;
     }
 }

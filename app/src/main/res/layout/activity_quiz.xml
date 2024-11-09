@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/question"
-        android:textSize="32sp"
+        android:textSize="48sp"
         android:textStyle="bold"
         android:padding="16dp"
         android:textColor="@color/text_primary"
@@ -35,9 +35,9 @@
             android:layout_columnWeight="1"
             android:text="@string/answer"
             android:backgroundTint="@color/answer_button"
-            android:textColor="@color/text_secondary"
+            android:textColor="@color/text_color"
             android:gravity="center"
-            android:textSize="15sp"
+            android:textSize="20sp"
             android:layout_margin="10dp"
             />
 
@@ -48,10 +48,10 @@
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:text="@string/answer"
-            android:textColor="@color/text_secondary"
+            android:textColor="@color/text_color"
             android:backgroundTint="@color/answer_button"
             android:gravity="center"
-            android:textSize="15sp"
+            android:textSize="20sp"
             android:layout_margin="10dp"
             />
 
@@ -62,10 +62,10 @@
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:text="@string/answer"
-            android:textColor="@color/text_secondary"
+            android:textColor="@color/text_color"
             android:backgroundTint="@color/answer_button"
             android:gravity="center"
-            android:textSize="15sp"
+            android:textSize="20sp"
             android:layout_margin="10dp"
             />
 
@@ -76,10 +76,10 @@
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:text="@string/answer"
-            android:textColor="@color/text_secondary"
+            android:textColor="@color/text_color"
             android:backgroundTint="@color/answer_button"
             android:gravity="center"
-            android:textSize="15sp"
+            android:textSize="20sp"
             android:layout_margin="10dp"
             />
     </GridLayout>

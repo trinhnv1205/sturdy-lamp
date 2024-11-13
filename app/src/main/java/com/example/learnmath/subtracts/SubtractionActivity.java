@@ -1,39 +1,77 @@
 package com.example.learnmath.subtracts;
 
-import android.widget.Button;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.LinearLayout;
 
-import com.example.learnmath.BaseQuizActivity;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.learnmath.R;
 
-import java.util.Random;
-
-public class SubtractionActivity extends BaseQuizActivity {
+public class SubtractionActivity extends AppCompatActivity {
 
     @Override
-    protected int getLayoutResourceId() {
-        return R.layout.activity_quiz;
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(getLayoutResourceId());
+
+        LinearLayout BangTruButton = findViewById(R.id.Bangtru_button);
+        BangTruButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SubtractionActivity.this, Bangtru.class);
+                startActivity(intent);
+            }
+        });
+
+        LinearLayout tru1chusoButton = findViewById(R.id.Chumotchuso_button);
+        tru1chusoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SubtractionActivity.this, Tru1_1chuso.class);
+                startActivity(intent);
+            }
+        });
+
+        LinearLayout tru2chusoButton = findViewById(R.id.Chuhaichuso_button);
+        tru2chusoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SubtractionActivity.this, Tru2_1chuso.class);
+                startActivity(intent);
+            }
+        });
+
+        LinearLayout TrubasoButton = findViewById(R.id.Trubaso_button);
+        TrubasoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SubtractionActivity.this, Tru2_2chuso.class);
+                startActivity(intent);
+            }
+        });
+
+        LinearLayout tru3soButton = findViewById(R.id.Trubaso_button);
+        tru3soButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SubtractionActivity.this, Tru3_1chuso.class);
+                startActivity(intent);
+            }
+        });
+
+        LinearLayout PheptrudongianButton = findViewById(R.id.Pheptrudongian_button);
+        PheptrudongianButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SubtractionActivity.this, Pheptrudongian.class);
+                startActivity(intent);
+            }
+        });
     }
 
-    @Override
-    protected void generateQuestion() {
-        Random random = new Random();
-        int num1 = random.nextInt(10) + 1;
-        int num2 = random.nextInt(10) + 1;
-        correctAnswer = num1 - num2;
-        questionText.setText(num1 + " - " + num2 + " = ?");
-
-        int correctPosition = random.nextInt(4);
-        Button[] buttons = {answer1, answer2, answer3, answer4};
-        for (int i = 0; i < 4; i++) {
-            if (i == correctPosition) {
-                buttons[i].setText(String.valueOf(correctAnswer));
-            } else {
-                int wrongAnswer;
-                do {
-                    wrongAnswer = random.nextInt(20) - 10;
-                } while (wrongAnswer == correctAnswer);
-                buttons[i].setText(String.valueOf(wrongAnswer));
-            }
-        }
+    private int getLayoutResourceId() {
+        return R.layout.activity_subtraction;
     }
 }

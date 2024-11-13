@@ -16,12 +16,62 @@ public class AdditionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutResourceId());
 
-        LinearLayout multiplicationButton = findViewById(R.id.continuous_addition_button);
-        multiplicationButton.setOnClickListener(new View.OnClickListener() {
+        LinearLayout continuousButton = findViewById(R.id.continuous_addition_button);
+        continuousButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Start the MultiplicationActivity
+
                 Intent intent = new Intent(AdditionActivity.this, ContinuousAdditionActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        LinearLayout cong1chusoButton = findViewById(R.id.cong1chuso_button);
+        cong1chusoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(AdditionActivity.this, Cong1chuso.class);
+                startActivity(intent);
+            }
+        });
+
+        LinearLayout cong2chusoButton = findViewById(R.id.cong2chuso_button);
+        cong2chusoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(AdditionActivity.this, Cong2chuso.class);
+                startActivity(intent);
+            }
+        });
+
+        LinearLayout cong3chusoButton = findViewById(R.id.cong3chuso_button);
+        cong3chusoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(AdditionActivity.this, Cong3chuso.class);
+                startActivity(intent);
+            }
+        });
+
+        LinearLayout cong3soButton = findViewById(R.id.cong3so_button);
+        cong3soButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(AdditionActivity.this, Cong3so.class);
+                startActivity(intent);
+            }
+        });
+
+        LinearLayout PhepCongTimSo = findViewById(R.id.phepcongtimso_button);
+        PhepCongTimSo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(AdditionActivity.this, Phepcong_Timso.class);
                 startActivity(intent);
             }
         });

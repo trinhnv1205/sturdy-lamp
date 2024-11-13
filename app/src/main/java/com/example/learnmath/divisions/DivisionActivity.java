@@ -1,39 +1,78 @@
 package com.example.learnmath.divisions;
 
-import android.widget.Button;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.LinearLayout;
 
-import com.example.learnmath.BaseQuizActivity;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.learnmath.R;
 
-import java.util.Random;
-
-public class DivisionActivity extends BaseQuizActivity {
+public class DivisionActivity extends AppCompatActivity {
 
     @Override
-    protected int getLayoutResourceId() {
-        return R.layout.activity_quiz;
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(getLayoutResourceId());
+
+        LinearLayout BangChia = findViewById(R.id.bangchia_button);
+        BangChia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DivisionActivity.this, Bangchia.class);
+                startActivity(intent);
+            }
+        });
+
+        LinearLayout Chia1ChuSo = findViewById(R.id.chia1chuso_button);
+        Chia1ChuSo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DivisionActivity.this, Chia1_1chuso.class);
+                startActivity(intent);
+            }
+        });
+
+        LinearLayout Chia2ChuSo = findViewById(R.id.chia2chuso_button);
+        Chia2ChuSo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DivisionActivity.this, Chia2_1chuso.class);
+                startActivity(intent);
+            }
+        });
+
+        LinearLayout ChiaSoHaiDonVi = findViewById(R.id.chiasohaidonvi_button);
+        ChiaSoHaiDonVi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DivisionActivity.this, Chia2_2chuso.class);
+                startActivity(intent);
+            }
+        });
+
+
+        LinearLayout ChiaBaSo = findViewById(R.id.chiabachuso_button);
+        ChiaBaSo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DivisionActivity.this, Chia3_1chuso.class);
+                startActivity(intent);
+            }
+        });
+
+        LinearLayout PhepChiaDonGian = findViewById(R.id.phepchiadongian_button);
+        PhepChiaDonGian.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DivisionActivity.this, Phepchiadongian.class);
+                startActivity(intent);
+            }
+        });
     }
 
-    @Override
-    protected void generateQuestion() {
-        Random random = new Random();
-        int num1 = random.nextInt(10) + 1;
-        int num2 = random.nextInt(10) + 1;
-        correctAnswer = num1 / num2;
-        questionText.setText(num1 + " / " + num2 + " = ?");
-
-        int correctPosition = random.nextInt(4);
-        Button[] buttons = {answer1, answer2, answer3, answer4};
-        for (int i = 0; i < 4; i++) {
-            if (i == correctPosition) {
-                buttons[i].setText(String.valueOf(correctAnswer));
-            } else {
-                int wrongAnswer;
-                do {
-                    wrongAnswer = random.nextInt(10) + 1;
-                } while (wrongAnswer == correctAnswer);
-                buttons[i].setText(String.valueOf(wrongAnswer));
-            }
-        }
+    private int getLayoutResourceId() {
+        return R.layout.activity_division;
     }
 }

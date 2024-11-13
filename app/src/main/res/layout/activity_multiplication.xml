@@ -16,7 +16,7 @@
 
         <!-- Addition -->
         <LinearLayout
-            android:id="@+id/continuous_addition_button"
+            android:id="@+id/bangnhan_button"
             android:layout_width="180dp"
             android:layout_height="150dp"
             android:layout_rowWeight="1"
@@ -36,14 +36,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/cong_lien_tiep"
+                android:text="@string/bang_nhan"
                 android:textColor="@color/text_color"
                 android:textSize="18sp" />
         </LinearLayout>
 
 
         <LinearLayout
-            android:id="@+id/cong1chuso_button"
+            android:id="@+id/nhan1x1chuso_button"
             android:layout_width="180dp"
             android:layout_height="150dp"
             android:layout_rowWeight="1"
@@ -63,7 +63,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/cong_mot_chu_so"
+                android:text="@string/nhan_mot_chu_so"
                 android:textColor="@color/text_color"
                 android:textSize="18sp" />
         </LinearLayout>
@@ -76,7 +76,7 @@
 
 
         <LinearLayout
-            android:id="@+id/cong2chuso_button"
+            android:id="@+id/nhan2x1chuso_button"
             android:layout_width="180dp"
             android:layout_height="150dp"
             android:layout_rowWeight="1"
@@ -96,14 +96,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/cong_hai_chu_so"
+                android:text="@string/nhan_hai_chu_so"
                 android:textColor="@color/text_color"
                 android:textSize="18sp" />
         </LinearLayout>
 
 
         <LinearLayout
-            android:id="@+id/cong3chuso_button"
+            android:id="@+id/nhan2x2chuso_button"
             android:layout_width="180dp"
             android:layout_height="150dp"
             android:layout_rowWeight="1"
@@ -123,7 +123,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/cong_ba_chu_so"
+                android:text="@string/nhan_so_hai_don_vi"
                 android:textColor="@color/text_color"
                 android:textSize="18sp" />
         </LinearLayout>
@@ -136,7 +136,7 @@
         android:gravity="center">
         <!-- Compare -->
         <LinearLayout
-            android:id="@+id/cong3so_button"
+            android:id="@+id/nhan3x1chuso_button"
             android:layout_width="180dp"
             android:layout_height="150dp"
             android:layout_rowWeight="1"
@@ -156,14 +156,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/cong_ba_so"
+                android:text="@string/nhan_ba_so"
                 android:textColor="@color/text_color"
                 android:textSize="18sp" />
         </LinearLayout>
 
 
         <LinearLayout
-            android:id="@+id/phepcongtimso_button"
+            android:id="@+id/phepnhandongian_button"
             android:layout_width="180dp"
             android:layout_height="150dp"
             android:layout_rowWeight="1"
@@ -183,7 +183,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/tim_so_con_thieu"
+                android:text="@string/phep_nhan_don_gian"
                 android:textColor="@color/text_color"
                 android:textSize="18sp" />
         </LinearLayout>

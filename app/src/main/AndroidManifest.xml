@@ -21,12 +21,45 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".additions.AdditionActivity" />
+
         <activity android:name=".subtracts.SubtractionActivity" />
+        <activity android:name=".subtracts.Bangtru" />
+        <activity android:name=".subtracts.Tru1_1chuso" />
+        <activity android:name=".subtracts.Tru2_1chuso" />
+        <activity android:name=".subtracts.Tru2_2chuso" />
+        <activity android:name=".subtracts.Tru3_1chuso" />
+        <activity android:name=".subtracts.Trubaso" />
+        <activity android:name=".subtracts.Pheptrudongian" />
+
+
         <activity android:name=".multiplications.MultiplicationActivity" />
+        <activity android:name=".multiplications.Bangnhan" />
+        <activity android:name=".multiplications.Nhan1x1chuso" />
+        <activity android:name=".multiplications.Nhan2x1chuso" />
+        <activity android:name=".multiplications.Nhan3x1chuso" />
+        <activity android:name=".multiplications.Nhan2x2chuso" />
+        <activity android:name=".multiplications.Phepnhandongian" />
+
         <activity android:name=".divisions.DivisionActivity" />
+        <activity android:name=".divisions.Bangchia" />
+        <activity android:name=".divisions.Chia1_1chuso" />
+        <activity android:name=".divisions.Chia2_1chuso" />
+        <activity android:name=".divisions.Chia2_2chuso" />
+        <activity android:name=".divisions.Chia3_1chuso" />
+        <activity android:name=".divisions.Phepchiadongian" />
+
         <activity android:name=".compares.ComparisonActivity" />
+
+
+        <activity android:name=".additions.AdditionActivity" />
         <activity android:name=".additions.ContinuousAdditionActivity" />
+        <activity android:name=".additions.Cong1chuso" />
+        <activity android:name=".additions.Cong2chuso" />
+        <activity android:name=".additions.Cong3chuso" />
+        <activity android:name=".additions.Cong3so" />
+        <activity android:name=".additions.Phepcong_Timso" />
+
+
         <activity android:name=".random.RandomActivity" />
         <activity android:name=".ranks.RankActivity" />
         <activity android:name=".settings.SettingsActivity" />

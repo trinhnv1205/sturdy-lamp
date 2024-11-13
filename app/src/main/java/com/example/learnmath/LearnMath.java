@@ -33,6 +33,7 @@ public class LearnMath extends AppCompatActivity {
         database = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "app_database").build();
 
         setContentView(R.layout.activity_learn_math);
+        // Apply the system window insets to the root view
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);

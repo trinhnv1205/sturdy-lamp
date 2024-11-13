@@ -1,6 +1,9 @@
 package com.example.learnmath;
 
+import android.app.Dialog;
+import android.content.Context;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -17,6 +20,7 @@ public abstract class BaseQuizActivity extends AppCompatActivity {
     protected TextView feedbackText;
     protected Button retryButton, viewScoreButton;
     protected int correctAnswer;
+    protected int correctAnswer2;
     protected int score = 0;
     protected int questionCount = 0;
     protected Button answer1, answer2, answer3, answer4;
@@ -73,10 +77,35 @@ public abstract class BaseQuizActivity extends AppCompatActivity {
 
     protected abstract void generateQuestion();
 
+
+
     protected void checkAnswer(Button selectedButton) {
         int selectedAnswer = Integer.parseInt(selectedButton.getText().toString());
 
         if (selectedAnswer == correctAnswer) {
+            score++;
+            feedbackText.setText("Chính xác!");
+        } else {
+            feedbackText.setText("Sai rồi!");
+        }
+
+        questionCount++;
+        if (questionCount < 10) {
+            generateQuestion();
+        } else {
+            feedbackText.setText("Trò chơi kết thúc! Tổng điểm là: " + score);
+            saveScore();
+            retryButton.setVisibility(View.VISIBLE);
+            viewScoreButton.setVisibility(View.VISIBLE);
+
+        }
+    }
+
+
+    protected void checkAnswer2 (Button selectedButton2 ) {
+        int selectedAnswer2 = Integer.parseInt(selectedButton2.getText().toString());
+
+        if (selectedAnswer2 == correctAnswer2 ) {
             score++;
             feedbackText.setText("Chính xác!");
         } else {

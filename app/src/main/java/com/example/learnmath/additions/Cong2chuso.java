@@ -10,9 +10,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-public class ContinuousAdditionActivity extends BaseQuizActivity {
-
-    private int currentAddend = 1;
+public class Cong2chuso extends BaseQuizActivity {
 
     @Override
     protected int getLayoutResourceId() {
@@ -21,9 +19,11 @@ public class ContinuousAdditionActivity extends BaseQuizActivity {
 
     @Override
     protected void generateQuestion() {
-        int baseNumber = 1;
-        correctAnswer = baseNumber + currentAddend;
-        questionText.setText(baseNumber + " + " + currentAddend + " = ?");
+        Random random = new Random();
+        int num1 = random.nextInt(90) + 10; // Range from 10 to 99
+        int num2 = random.nextInt(90) + 10; // Range from 10 to 99
+        correctAnswer = num1 + num2;
+        questionText.setText(num1 + " + " + num2 + " = ?");
 
         List<Integer> positions = Arrays.asList(0, 1, 2, 3);
         Collections.shuffle(positions);
@@ -34,13 +34,10 @@ public class ContinuousAdditionActivity extends BaseQuizActivity {
             } else {
                 int wrongAnswer;
                 do {
-                    wrongAnswer = new Random().nextInt(20) + 1;
+                    wrongAnswer = random.nextInt(179) + 20; // Range from 20 to 198
                 } while (wrongAnswer == correctAnswer);
                 buttons[i].setText(String.valueOf(wrongAnswer));
             }
         }
-
-        // Update the addend for the next question
-        currentAddend++;
     }
 }

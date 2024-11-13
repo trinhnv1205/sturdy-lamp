@@ -11,14 +11,54 @@
     <string name="view_score">Xem điểm</string>
     <string name="reset">Bắt đầu lại</string>
     <string name="retry">Thử lại</string>
+
     <string name="menu_add">Danh sách phép cộng</string>
-    <string name="cong_lien_tiep">Cộng liên tiếp</string>
+    <string name="cong_lien_tiep">Bảng cộng</string>
     <string name="cong_mot_chu_so">Cộng 1 chữ số</string>
     <string name="cong_ba_chu_so">Cộng 3 chữ số</string>
     <string name="cong_hai_chu_so">Cộng 2 chữ số</string>
     <string name="cong_ba_so">Cộng 3 số</string>
     <string name="tim_so_con_thieu">Tìm số còn thiếu</string>
+
     <string name="settings">Cài đặt</string>
     <string name="rank">Xếp hạng</string>
     <string name="answer">Câu trả lời</string>
+
+    <string name="bang_nhan">Bảng nhân</string>
+    <string name="nhan_mot_chu_so">Nhân 1 x 1 chữ số </string>
+    <string name="nhan_hai_chu_so">Nhân 2 x 1 chữ số</string>
+    <string name="nhan_so_hai_don_vi">Nhân 2 x 2 chữ số</string>
+    <string name="nhan_ba_so">Nhân 3 x 1 chữ số</string>
+    <string name="phep_nhan_don_gian">Phép nhân đơn giản</string>
+
+    <string name="bang_chia">Bảng chia</string>
+    <string name="chia_mot_chu_so">Chia 1 / 1 chữ số</string>
+    <string name="chia_hai_chu_so">Chia 2 / 1 chữ số</string>
+    <string name="chia_so_hai_don_vi">Chia 2 / 2 chữ số</string>
+    <string name="chia_ba_chu_so">Chia 3 / 1 số</string>
+    <string name="phep_chia_don_gian">Phép chia đơn giản</string>
+
+    <string name="bang_tru">Bảng trừ</string>
+    <string name="tru_mot_chu_so">Trừ 1 - 1  chữ số</string>
+    <string name="tru_ba_chu_so">Trừ 3 - 1 chữ số</string>
+    <string name="tru_hai_chu_so">Trừ 2- 2 chữ số</string>
+    <string name="tru_ba_so">Trừ 3 số</string>
+    <string name="Phep_tru_don_gian">Phép trừ đơn giản</string>
+
+
+    <string name="app">Bang Nhan</string>
+    <string-array name="times_table_options">
+        <item>Bang Nhan 1</item>
+        <item>Bang Nhan 2</item>
+        <item>Bang Nhan 3</item>
+        <item>Bang Nhan 4</item>
+        <item>Bang Nhan 5</item>
+        <item>Bang Nhan 6</item>
+        <item>Bang Nhan 7</item>
+        <item>Bang Nhan 8</item>
+        <item>Bang Nhan 9</item>
+        <item>Bang Nhan 10</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

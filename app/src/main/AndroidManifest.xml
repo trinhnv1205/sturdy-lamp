@@ -13,7 +13,7 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name=".fragment.MenuMain"
+            android:name=".ManHinhChinh"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,47 +22,44 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".subtracts.SubtractionActivity" />
-        <activity android:name=".subtracts.Bangtru" />
-        <activity android:name=".subtracts.Tru1_1chuso" />
-        <activity android:name=".subtracts.Tru2_1chuso" />
-        <activity android:name=".subtracts.Tru2_2chuso" />
-        <activity android:name=".subtracts.Tru3_1chuso" />
-        <activity android:name=".subtracts.Trubaso" />
-        <activity android:name=".subtracts.Pheptrudongian" />
+        <activity android:name=".pheptru.SubtractionActivity" />
+        <activity android:name=".pheptru.Bangtru" />
+        <activity android:name=".pheptru.Tru1_1chuso" />
+        <activity android:name=".pheptru.Tru2_1chuso" />
+        <activity android:name=".pheptru.Tru2_2chuso" />
+        <activity android:name=".pheptru.Tru3_1chuso" />
+        <activity android:name=".pheptru.Trubaso" />
+        <activity android:name=".pheptru.Pheptrudongian" />
 
 
-        <activity android:name=".multiplications.MultiplicationActivity" />
-        <activity android:name=".multiplications.Bangnhan" />
-        <activity android:name=".multiplications.Nhan1x1chuso" />
-        <activity android:name=".multiplications.Nhan2x1chuso" />
-        <activity android:name=".multiplications.Nhan3x1chuso" />
-        <activity android:name=".multiplications.Nhan2x2chuso" />
-        <activity android:name=".multiplications.Phepnhandongian" />
+        <activity android:name=".phepnhan.PhepNhanActivity" />
+        <activity android:name=".phepnhan.Bangnhan" />
+        <activity android:name=".phepnhan.Nhan1x1chuso" />
+        <activity android:name=".phepnhan.Nhan2x1chuso" />
+        <activity android:name=".phepnhan.Nhan3x1chuso" />
+        <activity android:name=".phepnhan.Nhan2x2chuso" />
+        <activity android:name=".phepnhan.PhepNhanDonGian" />
 
-        <activity android:name=".divisions.DivisionActivity" />
-        <activity android:name=".divisions.Bangchia" />
-        <activity android:name=".divisions.Chia1_1chuso" />
-        <activity android:name=".divisions.Chia2_1chuso" />
-        <activity android:name=".divisions.Chia2_2chuso" />
-        <activity android:name=".divisions.Chia3_1chuso" />
-        <activity android:name=".divisions.Phepchiadongian" />
+        <activity android:name=".phepchia.MenuPhepChia" />
+        <activity android:name=".phepchia.Bangchia" />
+        <activity android:name=".phepchia.Chia1_1chuso" />
+        <activity android:name=".phepchia.Chia2_1chuso" />
+        <activity android:name=".phepchia.Chia2_2chuso" />
+        <activity android:name=".phepchia.Chia3_1chuso" />
+        <activity android:name=".phepchia.PhepChiaDonGian" />
 
-        <activity android:name=".compares.ComparisonActivity" />
+        <activity android:name=".sosanh.PhepSoSanhActivity" />
 
+        <activity android:name=".phepcong.PhepCongLienTiepActivity" />
+        <activity android:name=".phepcong.Cong1chuso" />
+        <activity android:name=".phepcong.Cong2chuso" />
+        <activity android:name=".phepcong.Cong3chuso" />
+        <activity android:name=".phepcong.Cong3so" />
+        <activity android:name=".phepcong.PhepcongTimso" />
+        <activity android:name=".phepcong.MenuPhepCong" />
 
-        <activity android:name=".additions.AdditionActivity" />
-        <activity android:name=".additions.ContinuousAdditionActivity" />
-        <activity android:name=".additions.Cong1chuso" />
-        <activity android:name=".additions.Cong2chuso" />
-        <activity android:name=".additions.Cong3chuso" />
-        <activity android:name=".additions.Cong3so" />
-        <activity android:name=".additions.Phepcong_Timso" />
-
-
-        <activity android:name=".random.RandomActivity" />
-        <activity android:name=".ranks.RankActivity" />
-        <activity android:name=".settings.SettingsActivity" />
+        <activity android:name=".ngaunhien.RandomActivity" />
+        <activity android:name=".xephang.XepHangActivity" />
 
     </application>
 

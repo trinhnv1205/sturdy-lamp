@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".fragment.CaiDat">
+
+
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/anh_toolbar3"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="352dp"
+        android:layout_below="@id/toolbar"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:text="Cài đặt"
+            android:textColor="@color/text_primary"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Switch
+            android:id="@+id/nhacnen"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Nhạc nền" />
+
+        <TextView
+            android:id="@+id/switch_change_language"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableRight="@drawable/ic_down"
+            android:gravity="center_vertical"
+            android:text="Ngôn ngữ" />
+
+        <TextView
+            android:id="@+id/btn_child_profile"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableRight="@drawable/ic_chill"
+            android:gravity="center_vertical"
+            android:text="Hồ sơ của trẻ" />
+
+        <TextView
+            android:id="@+id/btn_result_reports"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableRight="@drawable/ic_baocao"
+            android:gravity="center_vertical"
+            android:text="Báo cáo kết quả" />
+
+    </LinearLayout>
+
+</RelativeLayout>

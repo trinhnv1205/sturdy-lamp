@@ -1,9 +1,7 @@
 package com.example.learnmath;
 
-import android.app.Dialog;
-import android.content.Context;
+import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -13,11 +11,11 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 
-import com.example.learnmath.entities.AppDatabase;
-import com.example.learnmath.entities.User;
+import com.example.learnmath.thucthe.AppDatabase;
+import com.example.learnmath.thucthe.Settings;
+import com.example.learnmath.thucthe.User;
 
 public abstract class BaseQuizActivity extends AppCompatActivity {
-
     protected TextView questionText;
     protected TextView feedbackText;
     protected Button retryButton, viewScoreButton;
@@ -33,7 +31,10 @@ public abstract class BaseQuizActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutResourceId());
 
+
         database = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "app_database").build();
+
+
 
         questionText = findViewById(R.id.question_text);
         feedbackText = findViewById(R.id.feedback_text);
@@ -74,19 +75,11 @@ public abstract class BaseQuizActivity extends AppCompatActivity {
                 viewScore();
             }
         });
-
-
-        Spinner chondauSpinner = findViewById(R.id.chondau);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.comparison_operators, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        chondauSpinner.setAdapter(adapter);
     }
 
     protected abstract int getLayoutResourceId();
 
     protected abstract void generateQuestion();
-
 
 
     protected void checkAnswer(Button selectedButton) {
@@ -112,10 +105,10 @@ public abstract class BaseQuizActivity extends AppCompatActivity {
     }
 
 
-    protected void checkAnswer2 (Button selectedButton2 ) {
+    protected void checkAnswer2(Button selectedButton2) {
         int selectedAnswer2 = Integer.parseInt(selectedButton2.getText().toString());
 
-        if (selectedAnswer2 == correctAnswer2 ) {
+        if (selectedAnswer2 == correctAnswer2) {
             score++;
             feedbackText.setText("Chính xác!");
         } else {
@@ -166,4 +159,6 @@ public abstract class BaseQuizActivity extends AppCompatActivity {
     protected void viewScore() {
         feedbackText.setText("Tổng điểm là: " + score);
     }
+
+
 }

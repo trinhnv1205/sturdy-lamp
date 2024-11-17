@@ -1,11 +1,10 @@
-<!-- res/drawable/ic_division.xml -->
+<!-- res/drawable/ic_division_star.xml -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="24dp"
     android:height="24dp"
     android:viewportWidth="24"
     android:viewportHeight="24">
     <path
-
-        android:fillColor="#000000"
-        android:pathData="M12,2A2,2 0 1,0 12,6A2,2 0 1,0 12,2M19,13H5V11H19V13M12,18A2,2 0 1,0 12,22A2,2 0 1,0 12,18Z" />
+        android:fillColor="#FFD700"
+        android:pathData="M12,2L15,8L22,9L17,14L18,21L12,18L6,21L7,14L2,9L9,8L12,2Z" />
 </vector>

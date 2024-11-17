@@ -8,11 +8,11 @@ public class SettingsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
+        setContentView(R.layout.activity_testing);
 
         getSupportFragmentManager()
             .beginTransaction()
-            .replace(R.id.settings_container, new SettingsFragment())
+            .replace(R.id.settings_button, new SettingsFragment())
             .commit();
     }
 }

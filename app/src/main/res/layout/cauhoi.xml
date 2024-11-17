@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
     android:background="@color/background_color"
-    android:gravity="center"
-
-    >
+    android:gravity="center">
 
     <TextView
         android:id="@+id/question_text"
         android:layout_width="376dp"
         android:layout_height="140dp"
-       android:background="@drawable/anhbg_cauhoi"
-
+        android:background="@drawable/anhbg_cauhoi"
         android:gravity="center"
         android:padding="16dp"
         android:text="@string/question"
@@ -22,70 +20,56 @@
         android:textSize="48sp"
         android:textStyle="bold" />
 
-    <GridLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:columnCount="2"
-        android:rowCount="2"
-        android:layout_gravity="center">
+        android:orientation="vertical"
+        android:gravity="center">
 
         <Button
             android:id="@+id/answer1"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:text="@string/answer"
-
-            android:backgroundTint="@color/answer_button"
-            android:textColor="@color/text_color"
-            android:gravity="center"
-            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            />
+            android:background="@drawable/echcon"
+            android:gravity="center"
+            android:text="@string/answer"
+            android:textColor="@color/text_color"
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/answer2"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/echcon"
+            android:gravity="center"
             android:text="@string/answer"
             android:textColor="@color/text_color"
-            android:backgroundTint="@color/answer_button"
-            android:gravity="center"
-            android:textSize="20sp"
-            android:layout_margin="10dp"
-            />
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/answer3"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/echcon"
+            android:gravity="center"
             android:text="@string/answer"
             android:textColor="@color/text_color"
-            android:backgroundTint="@color/answer_button"
-            android:gravity="center"
-            android:textSize="20sp"
-            android:layout_margin="10dp"
-            />
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/answer4"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/echcon"
+            android:gravity="center"
             android:text="@string/answer"
             android:textColor="@color/text_color"
-            android:backgroundTint="@color/answer_button"
-            android:gravity="center"
-            android:textSize="20sp"
-            android:layout_margin="10dp"
-            />
-    </GridLayout>
+            android:textSize="20sp" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/retry_button"

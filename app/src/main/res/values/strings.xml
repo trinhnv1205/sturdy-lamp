@@ -11,6 +11,7 @@
     <string name="view_score">Xem điểm</string>
     <string name="reset">Bắt đầu lại</string>
     <string name="retry">Thử lại</string>
+    <string name="test"> Kiểm tra</string>
 
     <string name="menu_add">Danh sách phép cộng</string>
     <string name="cong_lien_tiep">Bảng cộng</string>
@@ -59,6 +60,30 @@
         <item>Bang Nhan 9</item>
         <item>Bang Nhan 10</item>
     </string-array>
-    <!-- TODO: Remove or change this placeholder text -->
+
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tab_1">Tab 1</string>
+    <string name="tab_2">Tab 2</string>
+    <string name="tab_3">Tab 3</string>
+    <string name="tab_4">Tab 4</string>
+    <string name="tab_5">Xem hồ sơ cá nhân</string>
+    <string name="tab_6">Báo cáo kết quả</string>
+    <string name="tab_7">Ngôn ngữ</string>
+    <string name="tab_8">Âm thanh</string>
+    <string name="tab_9">Tab 9</string>
+    <string name="tab_10">Tab 10</string>
+    <string name="tab_11">Tab 11</string>
+    <string name="tab_12">Tab 12</string>
+    <string name="tab_13">Tab 13</string>
+    <string name="tab_14">Tab 14</string>
+
+
+    <string-array name="comparison_operators">
+        <item>&lt;</item>
+        <item>&gt;</item>
+        <item>=</item>
+    </string-array>
+
+
 </resources>

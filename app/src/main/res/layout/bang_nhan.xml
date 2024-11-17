@@ -1,7 +1,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#003366">
+    android:background="#98BEE9">
+
+
+    <Toolbar
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:background="@drawable/anh_toolbar"/>
 
     <!-- Nút Home -->
     <ImageButton
@@ -21,43 +27,39 @@
         android:layout_height="40dp"
         android:layout_margin="16dp"
         android:background="@null"
-        android:src="@drawable/ic_settings"
+        android:src="@drawable/ic_tamdung"
         android:layout_alignParentEnd="true"
         android:contentDescription="Pause Button" />
 
     <!-- Tiêu đề -->
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:text="Bang Nhan"
-        android:textSize="24sp"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold" />
 
     <!-- Thanh chọn bảng nhân -->
     <Spinner
         android:id="@+id/spinnerTable"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/title"
+
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="250dp"
         android:background="@drawable/item_background_square"
         android:entries="@array/times_table_options"
         android:popupBackground="#FFFFFF" />
 
     <!-- Danh sách phép tính -->
+
+    <!-- Các nút đáp án -->
+
     <LinearLayout
         android:id="@+id/calculationList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/spinnerTable"
         android:layout_margin="20dp"
-        android:orientation="vertical"
-        android:background="#E0F7FA">
+
+        android:layout_marginTop="117dp"
+        android:layout_marginBottom="20dp"
+        android:background="#E0F7FA"
+        android:orientation="vertical">
 
         <!-- Phép tính mẫu (dòng đầu tiên) -->
         <TextView
@@ -66,20 +68,19 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:padding="10dp"
-            android:text="2 x 1 = ?"
-            android:textSize="20sp"
-            android:textColor="#003366" />
+            android:text="@string/question"
+            android:textColor="#003366"
+            android:textSize="20sp" />
 
         <!-- Các phép tính khác có thể tạo động từ mã Java/Kotlin -->
     </LinearLayout>
 
-    <!-- Các nút đáp án -->
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:columnCount="2"
         android:rowCount="2"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="350dp"
         android:layout_gravity="center">
 
         <Button

@@ -5,7 +5,9 @@ import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -51,6 +53,7 @@ public abstract class BaseQuizActivity extends AppCompatActivity {
             public void onClick(View v) {
                 checkAnswer((Button) v);
             }
+
         };
 
         answer1.setOnClickListener(answerClickListener);
@@ -71,6 +74,13 @@ public abstract class BaseQuizActivity extends AppCompatActivity {
                 viewScore();
             }
         });
+
+
+        Spinner chondauSpinner = findViewById(R.id.chondau);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.comparison_operators, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        chondauSpinner.setAdapter(adapter);
     }
 
     protected abstract int getLayoutResourceId();

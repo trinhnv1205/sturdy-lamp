@@ -12,7 +12,6 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.room.Room;
 
-import com.example.learnmath.additions.AdditionActivity;
 import com.example.learnmath.compares.ComparisonActivity;
 import com.example.learnmath.divisions.DivisionActivity;
 import com.example.learnmath.entities.AppDatabase;
@@ -40,15 +39,6 @@ public class LearnMath extends AppCompatActivity {
             return insets;
         });
 
-        LinearLayout additionButton = findViewById(R.id.addition_button);
-        additionButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Start the AdditionActivity
-                Intent intent = new Intent(LearnMath.this, AdditionActivity.class);
-                startActivity(intent);
-            }
-        });
 
         LinearLayout subtractionButton = findViewById(R.id.subtraction_button);
         subtractionButton.setOnClickListener(new View.OnClickListener() {

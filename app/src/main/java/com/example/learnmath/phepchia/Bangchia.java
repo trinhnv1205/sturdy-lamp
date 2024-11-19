@@ -2,7 +2,7 @@ package com.example.learnmath.phepchia;
 
 import android.widget.Button;
 
-import com.example.learnmath.BaseQuizActivity;
+import com.example.learnmath.CauHoiActivity;
 import com.example.learnmath.R;
 
 import java.util.Arrays;
@@ -10,13 +10,13 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-public class Bangchia extends BaseQuizActivity {
+public class Bangchia extends CauHoiActivity {
 
     private int currentDivisor = 1;
 
     @Override
     protected int getLayoutResourceId() {
-        return R.layout.activity_quiz;
+        return R.layout.activity_cau_hoi;
     }
 
     @Override

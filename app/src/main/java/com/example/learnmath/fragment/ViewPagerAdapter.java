@@ -5,8 +5,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-import com.example.learnmath.phepcong.MenuPhepCong;
-
 public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
     public ViewPagerAdapter(FragmentManager supportFragmentManager, int behaviorResumeOnlyCurrentFragment) {
@@ -18,11 +16,11 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 1:
-                return new XepHang();
+                return new XepHangFragment();
             case 2:
-                return new CaiDat();
+                return new CaiDatFragment();
             default:
-                return new TrangChu();
+                return new TrangChuFragment();
         }
     }
 

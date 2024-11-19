@@ -20,16 +20,14 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class ManHinhChinh extends AppCompatActivity {
 
+    private static AppDatabase database;
     private ViewPager mViewPager;
     private BottomNavigationView mBottomNavigationView;
-    private static AppDatabase database;
     private MediaPlayer mediaPlayer;
 
     public static AppDatabase getDatabase() {
         return database;
     }
-
-
 
     protected void loadSettings() {
         new Thread(() -> {

@@ -1,4 +1,5 @@
 package com.example.learnmath.fragment;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -15,7 +16,7 @@ import com.example.learnmath.phepnhan.MenuPhepNhan;
 import com.example.learnmath.pheptru.MenuPhepTru;
 import com.example.learnmath.sosanh.PhepSoSanhActivity;
 
-public class TrangChu extends Fragment {
+public class TrangChuFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

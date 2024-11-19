@@ -72,6 +72,6 @@ public class MenuPhepNhan extends AppCompatActivity {
     }
 
     private int getLayoutResourceId() {
-        return R.layout.activity_multiplication;
+        return R.layout.activity_phep_nhan;
     }
 }

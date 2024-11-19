@@ -1,10 +1,7 @@
 package com.example.learnmath;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -17,9 +14,6 @@ import androidx.room.Room;
 import com.example.learnmath.thucthe.AppDatabase;
 import com.example.learnmath.thucthe.Settings;
 import com.example.learnmath.thucthe.User;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.view.KeyEvent;
 
 public abstract class BaseQuizActivity extends AppCompatActivity {
     protected TextView questionText;
@@ -31,29 +25,6 @@ public abstract class BaseQuizActivity extends AppCompatActivity {
     protected int questionCount = 0;
     protected Button answer1, answer2, answer3, answer4;
     private AppDatabase database;
-
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            showExitConfirmationDialog();
-            return true;
-        }
-        return super.onKeyDown(keyCode, event);
-    }
-    //thông báo khi ấn nút back
-    private void showExitConfirmationDialog() {
-        new AlertDialog.Builder(this)
-                .setTitle("Thoát khỏi bài làm")
-                .setMessage("Bạn có chắc chắn muốn thoát không?")
-                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        finish();
-                    }
-                })
-                .setNegativeButton(android.R.string.no, null)
-                .setIcon(R.drawable.ic_canhbao)
-                .show();
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

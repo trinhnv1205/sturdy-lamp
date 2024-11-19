@@ -2,16 +2,16 @@ package com.example.learnmath.phepchia;
 
 import android.widget.Button;
 
-import com.example.learnmath.BaseQuizActivity;
+import com.example.learnmath.CauHoiActivity;
 import com.example.learnmath.R;
 
 import java.util.Random;
 
-public class PhepChiaDonGian extends BaseQuizActivity {
+public class PhepChiaDonGian extends CauHoiActivity {
 
     @Override
     protected int getLayoutResourceId() {
-        return R.layout.activity_quiz;
+        return R.layout.activity_cau_hoi;
     }
 
     @Override

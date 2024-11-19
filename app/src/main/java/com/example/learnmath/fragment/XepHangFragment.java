@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment;
 import com.example.learnmath.R;
 
 
-public class XepHang extends Fragment {
+public class XepHangFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

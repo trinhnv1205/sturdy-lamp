@@ -2,7 +2,7 @@ package com.example.learnmath.phepcong;
 
 import android.widget.Button;
 
-import com.example.learnmath.BaseQuizActivity;
+import com.example.learnmath.CauHoiActivity;
 import com.example.learnmath.R;
 
 import java.util.Arrays;
@@ -10,11 +10,11 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-public class Cong2chuso extends BaseQuizActivity {
+public class Cong2chuso extends CauHoiActivity {
 
     @Override
     protected int getLayoutResourceId() {
-        return R.layout.activity_quiz;
+        return R.layout.activity_cau_hoi;
     }
 
     @Override

@@ -72,6 +72,6 @@ public class MenuPhepTru extends AppCompatActivity {
     }
 
     private int getLayoutResourceId() {
-        return R.layout.activity_subtraction;
+        return R.layout.activity_phep_tru;
     }
 }

@@ -73,6 +73,6 @@ public class MenuPhepChia extends AppCompatActivity {
     }
 
     private int getLayoutResourceId() {
-        return R.layout.activity_division;
+        return R.layout.activity_phep_chia;
     }
 }

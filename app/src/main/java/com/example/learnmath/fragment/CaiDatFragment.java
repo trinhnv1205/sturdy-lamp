@@ -14,7 +14,7 @@ import com.example.learnmath.R;
 import com.example.learnmath.thucthe.AppDatabase;
 import com.example.learnmath.thucthe.Settings;
 
-public class CaiDat extends Fragment {
+public class CaiDatFragment extends Fragment {
 
     private AppDatabase database;
     private Switch switchMusic;

@@ -21,7 +21,7 @@
     <string name="cong_ba_so">Cộng 3 số</string>
     <string name="phep_cong_don_gian">Phép cộng đơn giản</string>
 
-    <string name="settings">Cài đặt</string>
+    <string name="caiDatTable">Cài đặt</string>
     <string name="rank">Xếp hạng</string>
     <string name="answer">Câu trả lời</string>
 
@@ -79,6 +79,9 @@
     <string name="tab_14">Tab 14</string>
     <string name="luyentap">Luyện tập</string>
     <string name="xephang">Xếp hạng</string>
+    <string name="diem">Điểm</string>
+    <string name="ten">Tên</string>
+    <string name="nhac_nen">Nhạc nền</string>
 
 
     <string-array name="comparison_operators">

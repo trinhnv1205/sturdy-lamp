@@ -51,6 +51,7 @@ dependencies {
 
     implementation ("androidx.room:room-runtime:2.4.2")
     implementation(libs.androidx.preference)
+    implementation(libs.androidx.recyclerview)
     annotationProcessor ("androidx.room:room-compiler:2.4.2")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

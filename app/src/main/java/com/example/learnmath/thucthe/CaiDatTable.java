@@ -4,8 +4,8 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "settings")
-public class Settings {
+@Entity(tableName = "CaiDatTable")
+public class CaiDatTable {
     @PrimaryKey(autoGenerate = true)
     public int id;
 

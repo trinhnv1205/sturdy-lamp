@@ -11,12 +11,12 @@ import androidx.fragment.app.Fragment;
 import androidx.room.Room;
 
 import com.example.learnmath.R;
-import com.example.learnmath.thucthe.AppDatabase;
-import com.example.learnmath.thucthe.Settings;
+import com.example.learnmath.thucthe.CoSoDuLieu;
+import com.example.learnmath.thucthe.CaiDatTable;
 
 public class CaiDatFragment extends Fragment {
 
-    private AppDatabase database;
+    private CoSoDuLieu database;
     private Switch switchMusic;
     private MediaPlayer mediaPlayer;
 
@@ -27,7 +27,7 @@ public class CaiDatFragment extends Fragment {
 
         switchMusic = view.findViewById(R.id.nhacnen);
 
-        database = Room.databaseBuilder(getContext(), AppDatabase.class, "app_database").build();
+        database = Room.databaseBuilder(getContext(), CoSoDuLieu.class, "app_database").build();
 
         // Initialize MediaPlayer
         mediaPlayer = MediaPlayer.create(getContext(), R.raw.bg);
@@ -35,11 +35,11 @@ public class CaiDatFragment extends Fragment {
 
         // Load the current settings
         new Thread(() -> {
-            Settings settings = database.settingsDao().getSettings(1);
-            if (settings != null) {
+            CaiDatTable caiDatTable = database.settingsDao().getSettings(1);
+            if (caiDatTable != null) {
                 getActivity().runOnUiThread(() -> {
-                    switchMusic.setChecked(settings.musicEnabled);
-                    if (settings.musicEnabled) {
+                    switchMusic.setChecked(caiDatTable.musicEnabled);
+                    if (caiDatTable.musicEnabled) {
                         mediaPlayer.start();
                     }
                 });
@@ -48,10 +48,10 @@ public class CaiDatFragment extends Fragment {
 
         switchMusic.setOnCheckedChangeListener((buttonView, isChecked) -> {
             new Thread(() -> {
-                Settings settings = new Settings();
-                settings.id = 1; // Ensure the ID is set to 1
-                settings.musicEnabled = isChecked;
-                database.settingsDao().update(settings);
+                CaiDatTable caiDatTable = new CaiDatTable();
+                caiDatTable.id = 1; // Ensure the ID is set to 1
+                caiDatTable.musicEnabled = isChecked;
+                database.settingsDao().update(caiDatTable);
             }).start();
 
             if (isChecked) {

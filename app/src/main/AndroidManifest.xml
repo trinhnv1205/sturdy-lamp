@@ -59,7 +59,6 @@
         <activity android:name=".phepcong.MenuPhepCong" />
 
         <activity android:name=".luyentap.LuyenTapToan" />
-        <activity android:name=".xephang.XepHangActivity" />
 
     </application>
 

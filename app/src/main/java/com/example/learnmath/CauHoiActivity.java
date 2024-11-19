@@ -1,22 +1,18 @@
 package com.example.learnmath;
 
-import android.media.MediaPlayer;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 
-import com.example.learnmath.thucthe.AppDatabase;
-import com.example.learnmath.thucthe.Settings;
-import com.example.learnmath.thucthe.User;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.view.KeyEvent;
+import com.example.learnmath.thucthe.CoSoDuLieu;
+import com.example.learnmath.thucthe.NguoiDungTable;
 
 public abstract class CauHoiActivity extends AppCompatActivity {
     protected TextView questionText;
@@ -27,7 +23,7 @@ public abstract class CauHoiActivity extends AppCompatActivity {
     protected int score = 0;
     protected int questionCount = 0;
     protected Button answer1, answer2, answer3, answer4;
-    private AppDatabase database;
+    private CoSoDuLieu database;
 
 
     @Override
@@ -40,17 +36,11 @@ public abstract class CauHoiActivity extends AppCompatActivity {
     }
 
     private void showExitConfirmationDialog() {
-        new AlertDialog.Builder(this)
-                .setTitle("Thoát khỏi bài làm")
-                .setMessage("Bạn có chắc chắn muốn thoát không?")
-                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        finish();
-                    }
-                })
-                .setNegativeButton(android.R.string.no, null)
-                .setIcon(R.drawable.ic_canhbao)
-                .show();
+        new AlertDialog.Builder(this).setTitle("Thoát khỏi bài làm").setMessage("Bạn có chắc chắn muốn thoát không?").setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        }).setNegativeButton(android.R.string.no, null).setIcon(R.drawable.ic_canhbao).show();
     }
 
     @Override
@@ -59,8 +49,7 @@ public abstract class CauHoiActivity extends AppCompatActivity {
         setContentView(getLayoutResourceId());
 
 
-        database = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "app_database").build();
-
+        database = Room.databaseBuilder(getApplicationContext(), CoSoDuLieu.class, "app_database").build();
 
 
         questionText = findViewById(R.id.question_text);
@@ -76,32 +65,16 @@ public abstract class CauHoiActivity extends AppCompatActivity {
 
         generateQuestion();
 
-        View.OnClickListener answerClickListener = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                checkAnswer((Button) v);
-            }
-
-        };
+        View.OnClickListener answerClickListener = v -> checkAnswer((Button) v);
 
         answer1.setOnClickListener(answerClickListener);
         answer2.setOnClickListener(answerClickListener);
         answer3.setOnClickListener(answerClickListener);
         answer4.setOnClickListener(answerClickListener);
 
-        retryButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                retryQuiz();
-            }
-        });
+        retryButton.setOnClickListener(v -> retryQuiz());
 
-        viewScoreButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                viewScore();
-            }
-        });
+        viewScoreButton.setOnClickListener(v -> viewScore());
     }
 
     protected abstract int getLayoutResourceId();
@@ -127,38 +100,16 @@ public abstract class CauHoiActivity extends AppCompatActivity {
             saveScore();
             retryButton.setVisibility(View.VISIBLE);
             viewScoreButton.setVisibility(View.VISIBLE);
-
         }
     }
 
-
-    protected void checkAnswer2(Button selectedButton2) {
-        int selectedAnswer2 = Integer.parseInt(selectedButton2.getText().toString());
-
-        if (selectedAnswer2 == correctAnswer2) {
-            score++;
-            feedbackText.setText("Chính xác!");
-        } else {
-            feedbackText.setText("Sai rồi!");
-        }
-
-        questionCount++;
-        if (questionCount < 10) {
-            generateQuestion();
-        } else {
-            feedbackText.setText("Trò chơi kết thúc! Tổng điểm là: " + score);
-            saveScore();
-            retryButton.setVisibility(View.VISIBLE);
-            viewScoreButton.setVisibility(View.VISIBLE);
-        }
-    }
 
     private void saveScore() {
         new Thread(() -> {
-            User user = new User();
-            user.name = getRandomName();
-            user.score = score;
-            database.userDao().insert(user);
+            NguoiDungTable nguoiDungTable = new NguoiDungTable();
+            nguoiDungTable.name = getRandomName();
+            nguoiDungTable.score = score;
+            database.userDao().insert(nguoiDungTable);
         }).start();
     }
 

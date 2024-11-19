@@ -9,11 +9,11 @@ import androidx.room.Update;
 @Dao
 public interface SettingsDao {
     @Update
-    void update(com.example.learnmath.thucthe.Settings settings);
+    void update(CaiDatTable caiDatTable);
 
-    @Query("SELECT * FROM settings WHERE id = :id LIMIT 1")
-    com.example.learnmath.thucthe.Settings getSettings(int id);
+    @Query("SELECT * FROM CaiDatTable WHERE id = :id LIMIT 1")
+    CaiDatTable getSettings(int id);
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    void insert(com.example.learnmath.thucthe.Settings settings);
+    void insert(CaiDatTable caiDatTable);
 }

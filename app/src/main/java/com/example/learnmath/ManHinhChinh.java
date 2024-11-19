@@ -14,28 +14,28 @@ import androidx.room.Room;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.learnmath.fragment.ViewPagerAdapter;
-import com.example.learnmath.thucthe.AppDatabase;
-import com.example.learnmath.thucthe.Settings;
+import com.example.learnmath.thucthe.CoSoDuLieu;
+import com.example.learnmath.thucthe.CaiDatTable;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class ManHinhChinh extends AppCompatActivity {
 
-    private static AppDatabase database;
+    private static CoSoDuLieu database;
     private ViewPager mViewPager;
     private BottomNavigationView mBottomNavigationView;
     private MediaPlayer mediaPlayer;
 
-    public static AppDatabase getDatabase() {
+    public static CoSoDuLieu getDatabase() {
         return database;
     }
 
     protected void loadSettings() {
         new Thread(() -> {
-            Settings settings = database.settingsDao().getSettings(1);
-            if (settings != null) {
+            CaiDatTable caiDatTable = database.settingsDao().getSettings(1);
+            if (caiDatTable != null) {
                 runOnUiThread(() -> {
                     // Apply settings (e.g., enable/disable music)
-                    if (settings.musicEnabled) {
+                    if (caiDatTable.musicEnabled) {
                         mediaPlayer.start();
                     } else {
                         mediaPlayer.pause();
@@ -50,7 +50,7 @@ public class ManHinhChinh extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
 
-        database = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "app_database").build();
+        database = Room.databaseBuilder(getApplicationContext(), CoSoDuLieu.class, "app_database").build();
 
         // Initialize MediaPlayer and start playing background music
         mediaPlayer = MediaPlayer.create(this, R.raw.bg);
@@ -59,10 +59,10 @@ public class ManHinhChinh extends AppCompatActivity {
 
         // check if the settings are saved in the database
         new Thread(() -> {
-            Settings settings = database.settingsDao().getSettings(1);
-            if (settings == null) {
+            CaiDatTable caiDatTable = database.settingsDao().getSettings(1);
+            if (caiDatTable == null) {
                 // if not, save the default settings
-                database.settingsDao().insert(new Settings());
+                database.settingsDao().insert(new CaiDatTable());
             } else {
                 // if yes, load the settings
                 loadSettings();

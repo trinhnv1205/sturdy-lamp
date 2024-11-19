@@ -8,6 +8,13 @@
     android:id="@+id/menu_phep_cong"
     android:padding="16dp">
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/anh3">
+
+    </View>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -57,7 +64,7 @@
             <ImageView
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:src="@drawable/ic_addition" />
+                android:src="@drawable/ic_contho" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -90,7 +97,7 @@
             <ImageView
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:src="@drawable/ic_addition" />
+                android:src="@drawable/ic_tuyet" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -117,7 +124,7 @@
             <ImageView
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:src="@drawable/ic_addition" />
+                android:src="@drawable/ic_bling" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -150,7 +157,7 @@
             <ImageView
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:src="@drawable/ic_addition" />
+                android:src="@drawable/ic_tym" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -162,7 +169,7 @@
 
 
         <LinearLayout
-            android:id="@+id/phepcongtimso_button"
+            android:id="@+id/congdongian"
             android:layout_width="180dp"
             android:layout_height="150dp"
             android:layout_rowWeight="1"
@@ -177,15 +184,17 @@
             <ImageView
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:src="@drawable/ic_addition" />
+                android:src="@drawable/ic_caio" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/tim_so_con_thieu"
+                android:text="@string/phep_cong_don_gian"
                 android:textColor="@color/text_color"
                 android:textSize="18sp" />
         </LinearLayout>
     </LinearLayout>
+
+
 
 </LinearLayout>

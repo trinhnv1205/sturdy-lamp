@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.learnmath.R;
 
-public class SubtractionActivity extends AppCompatActivity {
+public class MenuPhepTru extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +20,7 @@ public class SubtractionActivity extends AppCompatActivity {
         BangTruButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SubtractionActivity.this, Bangtru.class);
+                Intent intent = new Intent(MenuPhepTru.this, Bangtru.class);
                 startActivity(intent);
             }
         });
@@ -29,7 +29,7 @@ public class SubtractionActivity extends AppCompatActivity {
         tru1chusoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SubtractionActivity.this, Tru1_1chuso.class);
+                Intent intent = new Intent(MenuPhepTru.this, Tru1_1chuso.class);
                 startActivity(intent);
             }
         });
@@ -38,7 +38,7 @@ public class SubtractionActivity extends AppCompatActivity {
         tru2chusoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SubtractionActivity.this, Tru2_1chuso.class);
+                Intent intent = new Intent(MenuPhepTru.this, Tru2_1chuso.class);
                 startActivity(intent);
             }
         });
@@ -47,7 +47,7 @@ public class SubtractionActivity extends AppCompatActivity {
         TrubasoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SubtractionActivity.this, Tru2_2chuso.class);
+                Intent intent = new Intent(MenuPhepTru.this, Tru2_2chuso.class);
                 startActivity(intent);
             }
         });
@@ -56,7 +56,7 @@ public class SubtractionActivity extends AppCompatActivity {
         tru3soButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SubtractionActivity.this, Tru3_1chuso.class);
+                Intent intent = new Intent(MenuPhepTru.this, Tru3_1chuso.class);
                 startActivity(intent);
             }
         });
@@ -65,7 +65,7 @@ public class SubtractionActivity extends AppCompatActivity {
         PheptrudongianButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SubtractionActivity.this, Pheptrudongian.class);
+                Intent intent = new Intent(MenuPhepTru.this, Pheptrudongian.class);
                 startActivity(intent);
             }
         });

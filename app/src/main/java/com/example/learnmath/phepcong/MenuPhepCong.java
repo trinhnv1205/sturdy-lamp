@@ -2,13 +2,10 @@ package com.example.learnmath.phepcong;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 
 import com.example.learnmath.R;
 
@@ -33,7 +30,8 @@ public class MenuPhepCong extends AppCompatActivity {
         cong1chusoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Handle button click
+                Intent intent = new Intent(MenuPhepCong.this, Cong1chuso.class);
+                startActivity(intent);
             }
         });
 
@@ -41,7 +39,8 @@ public class MenuPhepCong extends AppCompatActivity {
         cong2chusoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Handle button click
+                Intent intent = new Intent(MenuPhepCong.this, Cong2chuso.class);
+                startActivity(intent);
             }
         });
 
@@ -49,7 +48,8 @@ public class MenuPhepCong extends AppCompatActivity {
         cong3chusoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Handle button click
+                Intent intent = new Intent(MenuPhepCong.this, Cong3chuso.class);
+                startActivity(intent);
             }
         });
 
@@ -57,7 +57,18 @@ public class MenuPhepCong extends AppCompatActivity {
         cong3soButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(MenuPhepCong.this, Cong3so.class);
+                startActivity(intent);
+            }
+        });
+
+        LinearLayout congDonGian = findViewById(R.id.congdongian);
+        congDonGian.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 // Handle button click
+                Intent intent = new Intent(MenuPhepCong.this, PhepCongDonGian.class);
+                startActivity(intent);
             }
         });
     }

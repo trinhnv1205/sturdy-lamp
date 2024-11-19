@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.learnmath.R;
 
-public class PhepNhanActivity extends AppCompatActivity {
+public class MenuPhepNhan extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +20,7 @@ public class PhepNhanActivity extends AppCompatActivity {
         bangnhan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(PhepNhanActivity.this, Bangnhan.class);
+                Intent intent = new Intent(MenuPhepNhan.this, Bangnhan.class);
                 startActivity(intent);
             }
         });
@@ -29,7 +29,7 @@ public class PhepNhanActivity extends AppCompatActivity {
         nhan1x1chuso.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(PhepNhanActivity.this, Nhan1x1chuso.class);
+                Intent intent = new Intent(MenuPhepNhan.this, Nhan1x1chuso.class);
                 startActivity(intent);
             }
         });
@@ -38,7 +38,7 @@ public class PhepNhanActivity extends AppCompatActivity {
         nhan2x1ChuSo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(PhepNhanActivity.this, Nhan2x1chuso.class);
+                Intent intent = new Intent(MenuPhepNhan.this, Nhan2x1chuso.class);
                 startActivity(intent);
             }
         });
@@ -47,7 +47,7 @@ public class PhepNhanActivity extends AppCompatActivity {
         nhan2x2ChuSo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(PhepNhanActivity.this, Nhan2x2chuso.class);
+                Intent intent = new Intent(MenuPhepNhan.this, Nhan2x2chuso.class);
                 startActivity(intent);
             }
         });
@@ -56,7 +56,7 @@ public class PhepNhanActivity extends AppCompatActivity {
         nhan3x1ChuSo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(PhepNhanActivity.this, Nhan3x1chuso.class);
+                Intent intent = new Intent(MenuPhepNhan.this, Nhan3x1chuso.class);
                 startActivity(intent);
             }
         });
@@ -65,7 +65,7 @@ public class PhepNhanActivity extends AppCompatActivity {
         PhepNhanDonGian.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(PhepNhanActivity.this, com.example.learnmath.phepnhan.PhepNhanDonGian.class);
+                Intent intent = new Intent(MenuPhepNhan.this, com.example.learnmath.phepnhan.PhepNhanDonGian.class);
                 startActivity(intent);
             }
         });

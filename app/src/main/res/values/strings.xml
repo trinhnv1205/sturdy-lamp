@@ -19,7 +19,7 @@
     <string name="cong_ba_chu_so">Cộng 3 chữ số</string>
     <string name="cong_hai_chu_so">Cộng 2 chữ số</string>
     <string name="cong_ba_so">Cộng 3 số</string>
-    <string name="tim_so_con_thieu">Tìm số còn thiếu</string>
+    <string name="phep_cong_don_gian">Phép cộng đơn giản</string>
 
     <string name="settings">Cài đặt</string>
     <string name="rank">Xếp hạng</string>

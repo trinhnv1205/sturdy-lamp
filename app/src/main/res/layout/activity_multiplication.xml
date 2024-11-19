@@ -9,6 +9,11 @@
 
     >
 
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:background="@drawable/anh5"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -31,7 +36,7 @@
             <ImageView
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:src="@drawable/ic_addition" />
+                android:src="@drawable/ic_multiplication" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -58,7 +63,7 @@
             <ImageView
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:src="@drawable/ic_addition" />
+                android:src="@drawable/ic_khoihinh" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -91,7 +96,7 @@
             <ImageView
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:src="@drawable/ic_addition" />
+                android:src="@drawable/ic_traitim" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -118,7 +123,7 @@
             <ImageView
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:src="@drawable/ic_addition" />
+                android:src="@drawable/ic_hoaxau" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -151,7 +156,7 @@
             <ImageView
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:src="@drawable/ic_addition" />
+                android:src="@drawable/ic_trang" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -178,7 +183,7 @@
             <ImageView
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:src="@drawable/ic_addition" />
+                android:src="@drawable/ic_banh" />
 
             <TextView
                 android:layout_width="wrap_content"

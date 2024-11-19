@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".pheptru.SubtractionActivity" />
+        <activity android:name=".pheptru.MenuPhepTru" />
         <activity android:name=".pheptru.Bangtru" />
         <activity android:name=".pheptru.Tru1_1chuso" />
         <activity android:name=".pheptru.Tru2_1chuso" />
@@ -32,7 +32,7 @@
         <activity android:name=".pheptru.Pheptrudongian" />
 
 
-        <activity android:name=".phepnhan.PhepNhanActivity" />
+        <activity android:name=".phepnhan.MenuPhepNhan" />
         <activity android:name=".phepnhan.Bangnhan" />
         <activity android:name=".phepnhan.Nhan1x1chuso" />
         <activity android:name=".phepnhan.Nhan2x1chuso" />
@@ -55,10 +55,10 @@
         <activity android:name=".phepcong.Cong2chuso" />
         <activity android:name=".phepcong.Cong3chuso" />
         <activity android:name=".phepcong.Cong3so" />
-        <activity android:name=".phepcong.PhepcongTimso" />
+        <activity android:name=".phepcong.PhepCongDonGian" />
         <activity android:name=".phepcong.MenuPhepCong" />
 
-        <activity android:name=".ngaunhien.RandomActivity" />
+        <activity android:name=".luyentap.LuyenTapToan" />
         <activity android:name=".xephang.XepHangActivity" />
 
     </application>

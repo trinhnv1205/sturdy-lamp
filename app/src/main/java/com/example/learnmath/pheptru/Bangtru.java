@@ -5,9 +5,14 @@ import android.widget.Button;
 import com.example.learnmath.BaseQuizActivity;
 import com.example.learnmath.R;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 import java.util.Random;
 
 public class Bangtru extends BaseQuizActivity {
+
+    private int currentSubtrahend = 1;
 
     @Override
     protected int getLayoutResourceId() {
@@ -16,29 +21,26 @@ public class Bangtru extends BaseQuizActivity {
 
     @Override
     protected void generateQuestion() {
-        Random random = new Random();
-        int num1, num2, num3;
-        do {
-            num1 = random.nextInt(90) + 10; // Range from 10 to 99
-            num2 = random.nextInt(90) + 10; // Range from 10 to 99
-            num3 = random.nextInt(90) + 10; // Range from 10 to 99
-        } while (num1 < num2 + num3); // Ensure num1 is greater than or equal to the sum of num2 and num3
+        int baseNumber = 20; // Starting number for subtraction
+        correctAnswer = baseNumber - currentSubtrahend;
+        questionText.setText(baseNumber + " - " + currentSubtrahend + " = ?");
 
-        correctAnswer = num1 - num2 - num3;
-        questionText.setText(num1 + " - " + num2 + " - " + num3 + " = ?");
-
-        int correctPosition = random.nextInt(4);
+        List<Integer> positions = Arrays.asList(0, 1, 2, 3);
+        Collections.shuffle(positions);
         Button[] buttons = {answer1, answer2, answer3, answer4};
         for (int i = 0; i < 4; i++) {
-            if (i == correctPosition) {
+            if (positions.get(i) == 0) {
                 buttons[i].setText(String.valueOf(correctAnswer));
             } else {
                 int wrongAnswer;
                 do {
-                    wrongAnswer = random.nextInt(90); // Range from 0 to 89
+                    wrongAnswer = new Random().nextInt(20) + 1;
                 } while (wrongAnswer == correctAnswer);
                 buttons[i].setText(String.valueOf(wrongAnswer));
             }
         }
+
+        // Update the subtrahend for the next question
+        currentSubtrahend++;
     }
 }

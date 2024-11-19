@@ -9,7 +9,7 @@
 
     >
 
-    <Toolbar
+    <View
         android:layout_width="wrap_content"
         android:layout_height="200dp"
         android:background="@drawable/dichoi"/>
@@ -157,7 +157,7 @@
             <ImageView
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:src="@drawable/ic_baocao" />
+                android:src="@drawable/ic_bling" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -184,7 +184,7 @@
             <ImageView
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:src="@drawable/ic_xinh" />
+                android:src="@drawable/ic_hoaxau" />
 
             <TextView
                 android:layout_width="wrap_content"

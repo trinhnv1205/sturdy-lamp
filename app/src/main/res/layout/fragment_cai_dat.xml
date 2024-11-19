@@ -6,7 +6,7 @@
     tools:context=".fragment.CaiDatFragment">
 
 
-    <Toolbar
+    <View
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="250dp"
@@ -36,14 +36,6 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="Nhạc nền" />
-
-        <TextView
-            android:id="@+id/switch_change_language"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:drawableRight="@drawable/ic_down"
-            android:gravity="center_vertical"
-            android:text="Ngôn ngữ" />
 
         <TextView
             android:id="@+id/btn_child_profile"

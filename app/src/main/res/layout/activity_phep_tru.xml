@@ -5,9 +5,7 @@
     android:background="@color/background_color"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="16dp"
-
-    >
+    android:padding="16dp">
 
     <View
         android:layout_width="match_parent"

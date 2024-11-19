@@ -7,7 +7,7 @@ import com.example.learnmath.R;
 
 import java.util.Random;
 
-public class Pheptrudongian extends CauHoiActivity {
+public class TruMotVoiMotChuSo extends CauHoiActivity {
 
     @Override
     protected int getLayoutResourceId() {
@@ -17,10 +17,12 @@ public class Pheptrudongian extends CauHoiActivity {
     @Override
     protected void generateQuestion() {
         Random random = new Random();
-        int[] factors1 = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, 300, 400, 500, 600, 700, 800, 900};
-        int[] factors2 = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, 300, 400, 500, 600, 700, 800, 900};
-        int num1 = factors1[random.nextInt(factors1.length)];
-        int num2 = factors2[random.nextInt(factors2.length)];
+        int num1, num2;
+        do {
+            num1 = random.nextInt(10) + 1; // Range from 1 to 10
+            num2 = random.nextInt(10) + 1; // Range from 1 to 10
+        } while (num1 < num2); // Ensure num1 is greater than or equal to num2
+
         correctAnswer = num1 - num2;
         questionText.setText(num1 + " - " + num2 + " = ?");
 
@@ -32,7 +34,7 @@ public class Pheptrudongian extends CauHoiActivity {
             } else {
                 int wrongAnswer;
                 do {
-                    wrongAnswer = random.nextInt(100000) + 1; // Range from 1 to 100000
+                    wrongAnswer = random.nextInt(10); // Range from 0 to 9
                 } while (wrongAnswer == correctAnswer);
                 buttons[i].setText(String.valueOf(wrongAnswer));
             }

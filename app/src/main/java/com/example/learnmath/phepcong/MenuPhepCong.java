@@ -30,7 +30,7 @@ public class MenuPhepCong extends AppCompatActivity {
         cong1chusoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuPhepCong.this, Cong1chuso.class);
+                Intent intent = new Intent(MenuPhepCong.this, CongMotChuSo.class);
                 startActivity(intent);
             }
         });
@@ -39,7 +39,7 @@ public class MenuPhepCong extends AppCompatActivity {
         cong2chusoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuPhepCong.this, Cong2chuso.class);
+                Intent intent = new Intent(MenuPhepCong.this, CongHaiChuSo.class);
                 startActivity(intent);
             }
         });
@@ -48,7 +48,7 @@ public class MenuPhepCong extends AppCompatActivity {
         cong3chusoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuPhepCong.this, Cong3chuso.class);
+                Intent intent = new Intent(MenuPhepCong.this, CongBaChuSo.class);
                 startActivity(intent);
             }
         });
@@ -57,7 +57,7 @@ public class MenuPhepCong extends AppCompatActivity {
         cong3soButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuPhepCong.this, Cong3so.class);
+                Intent intent = new Intent(MenuPhepCong.this, CongBaSo.class);
                 startActivity(intent);
             }
         });

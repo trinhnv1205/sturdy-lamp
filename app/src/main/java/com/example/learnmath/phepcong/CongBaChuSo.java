@@ -1,4 +1,4 @@
-package com.example.learnmath.phepchia;
+package com.example.learnmath.phepcong;
 
 import android.widget.Button;
 
@@ -10,9 +10,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-public class Bangchia extends CauHoiActivity {
-
-    private int currentDivisor = 1;
+public class CongBaChuSo extends CauHoiActivity {
 
     @Override
     protected int getLayoutResourceId() {
@@ -21,9 +19,11 @@ public class Bangchia extends CauHoiActivity {
 
     @Override
     protected void generateQuestion() {
-        int baseNumber = 20; // Starting number for division
-        correctAnswer = baseNumber / currentDivisor;
-        questionText.setText(baseNumber + " / " + currentDivisor + " = ?");
+        Random random = new Random();
+        int num1 = random.nextInt(900) + 100; // Range from 100 to 999
+        int num2 = random.nextInt(900) + 100; // Range from 100 to 999
+        correctAnswer = num1 + num2;
+        questionText.setText(num1 + " + " + num2 + " = ?");
 
         List<Integer> positions = Arrays.asList(0, 1, 2, 3);
         Collections.shuffle(positions);
@@ -34,13 +34,10 @@ public class Bangchia extends CauHoiActivity {
             } else {
                 int wrongAnswer;
                 do {
-                    wrongAnswer = new Random().nextInt(20) + 1;
+                    wrongAnswer = random.nextInt(1798) + 200; // Range from 200 to 1998
                 } while (wrongAnswer == correctAnswer);
                 buttons[i].setText(String.valueOf(wrongAnswer));
             }
         }
-
-        // Update the divisor for the next question
-        currentDivisor++;
     }
 }

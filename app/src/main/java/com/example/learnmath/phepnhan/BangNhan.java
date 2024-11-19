@@ -1,4 +1,4 @@
-package com.example.learnmath.pheptru;
+package com.example.learnmath.phepnhan;
 
 import android.widget.Button;
 
@@ -10,9 +10,9 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-public class Bangtru extends CauHoiActivity {
+public class BangNhan extends CauHoiActivity {
 
-    private int currentSubtrahend = 1;
+    private int currentMultiplier = 1;
 
     @Override
     protected int getLayoutResourceId() {
@@ -21,9 +21,9 @@ public class Bangtru extends CauHoiActivity {
 
     @Override
     protected void generateQuestion() {
-        int baseNumber = 20; // Starting number for subtraction
-        correctAnswer = baseNumber - currentSubtrahend;
-        questionText.setText(baseNumber + " - " + currentSubtrahend + " = ?");
+        int baseNumber = 2; // Starting number for multiplication
+        correctAnswer = baseNumber * currentMultiplier;
+        questionText.setText(baseNumber + " * " + currentMultiplier + " = ?");
 
         List<Integer> positions = Arrays.asList(0, 1, 2, 3);
         Collections.shuffle(positions);
@@ -40,7 +40,7 @@ public class Bangtru extends CauHoiActivity {
             }
         }
 
-        // Update the subtrahend for the next question
-        currentSubtrahend++;
+        // Update the multiplier for the next question
+        currentMultiplier++;
     }
 }

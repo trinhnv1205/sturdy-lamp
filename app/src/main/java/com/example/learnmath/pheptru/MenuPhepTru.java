@@ -20,7 +20,7 @@ public class MenuPhepTru extends AppCompatActivity {
         BangTruButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuPhepTru.this, Bangtru.class);
+                Intent intent = new Intent(MenuPhepTru.this, BangTru.class);
                 startActivity(intent);
             }
         });
@@ -29,7 +29,7 @@ public class MenuPhepTru extends AppCompatActivity {
         tru1chusoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuPhepTru.this, Tru1_1chuso.class);
+                Intent intent = new Intent(MenuPhepTru.this, TruMotVoiMotChuSo.class);
                 startActivity(intent);
             }
         });
@@ -38,7 +38,7 @@ public class MenuPhepTru extends AppCompatActivity {
         tru2chusoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuPhepTru.this, Tru2_1chuso.class);
+                Intent intent = new Intent(MenuPhepTru.this, TruHaiVoiMotChuSo.class);
                 startActivity(intent);
             }
         });
@@ -47,7 +47,7 @@ public class MenuPhepTru extends AppCompatActivity {
         TrubasoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuPhepTru.this, Tru2_2chuso.class);
+                Intent intent = new Intent(MenuPhepTru.this, TruHaiVoiHaiChuSo.class);
                 startActivity(intent);
             }
         });
@@ -56,7 +56,7 @@ public class MenuPhepTru extends AppCompatActivity {
         tru3soButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuPhepTru.this, Tru3_1chuso.class);
+                Intent intent = new Intent(MenuPhepTru.this, TruBaVoiMotChuSo.class);
                 startActivity(intent);
             }
         });
@@ -65,7 +65,7 @@ public class MenuPhepTru extends AppCompatActivity {
         PheptrudongianButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuPhepTru.this, Pheptrudongian.class);
+                Intent intent = new Intent(MenuPhepTru.this, PhepTruDonGian.class);
                 startActivity(intent);
             }
         });

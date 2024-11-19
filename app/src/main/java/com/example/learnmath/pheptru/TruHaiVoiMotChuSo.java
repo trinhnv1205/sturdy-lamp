@@ -1,4 +1,4 @@
-package com.example.learnmath.phepcong;
+package com.example.learnmath.pheptru;
 
 import android.widget.Button;
 
@@ -7,7 +7,7 @@ import com.example.learnmath.R;
 
 import java.util.Random;
 
-public class Cong3so extends CauHoiActivity {
+public class TruHaiVoiMotChuSo extends CauHoiActivity {
 
     @Override
     protected int getLayoutResourceId() {
@@ -17,11 +17,14 @@ public class Cong3so extends CauHoiActivity {
     @Override
     protected void generateQuestion() {
         Random random = new Random();
-        int num1 = random.nextInt(9) + 1; // Range from 1 to 9
-        int num2 = random.nextInt(9) + 1; // Range from 1 to 9
-        int num3 = random.nextInt(9) + 1; // Range from 1 to 9
-        correctAnswer = num1 + num2 + num3;
-        questionText.setText(num1 + " + " + num2 + " + " + num3 + " = ?");
+        int num1, num2;
+        do {
+            num1 = random.nextInt(90) + 10; // Range from 10 to 99
+            num2 = random.nextInt(9) + 1;   // Range from 1 to 9
+        } while (num1 < num2); // Ensure num1 is greater than or equal to num2
+
+        correctAnswer = num1 - num2;
+        questionText.setText(num1 + " - " + num2 + " = ?");
 
         int correctPosition = random.nextInt(4);
         Button[] buttons = {answer1, answer2, answer3, answer4};
@@ -31,7 +34,7 @@ public class Cong3so extends CauHoiActivity {
             } else {
                 int wrongAnswer;
                 do {
-                    wrongAnswer = random.nextInt(27) + 3; // Range from 3 to 29
+                    wrongAnswer = random.nextInt(90); // Range from 0 to 89
                 } while (wrongAnswer == correctAnswer);
                 buttons[i].setText(String.valueOf(wrongAnswer));
             }

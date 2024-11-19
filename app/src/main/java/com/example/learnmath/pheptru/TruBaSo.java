@@ -7,7 +7,7 @@ import com.example.learnmath.R;
 
 import java.util.Random;
 
-public class Tru2_1chuso extends CauHoiActivity {
+public class TruBaSo extends CauHoiActivity {
 
     @Override
     protected int getLayoutResourceId() {
@@ -17,14 +17,15 @@ public class Tru2_1chuso extends CauHoiActivity {
     @Override
     protected void generateQuestion() {
         Random random = new Random();
-        int num1, num2;
+        int num1, num2, num3;
         do {
             num1 = random.nextInt(90) + 10; // Range from 10 to 99
-            num2 = random.nextInt(9) + 1;   // Range from 1 to 9
-        } while (num1 < num2); // Ensure num1 is greater than or equal to num2
+            num2 = random.nextInt(90) + 10; // Range from 10 to 99
+            num3 = random.nextInt(90) + 10; // Range from 10 to 99
+        } while (num1 < num2 + num3); // Ensure num1 is greater than or equal to the sum of num2 and num3
 
-        correctAnswer = num1 - num2;
-        questionText.setText(num1 + " - " + num2 + " = ?");
+        correctAnswer = num1 - num2 - num3;
+        questionText.setText(num1 + " - " + num2 + " - " + num3 + " = ?");
 
         int correctPosition = random.nextInt(4);
         Button[] buttons = {answer1, answer2, answer3, answer4};

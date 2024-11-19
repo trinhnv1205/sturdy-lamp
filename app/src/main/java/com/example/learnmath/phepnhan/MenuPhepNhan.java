@@ -20,7 +20,7 @@ public class MenuPhepNhan extends AppCompatActivity {
         bangnhan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuPhepNhan.this, Bangnhan.class);
+                Intent intent = new Intent(MenuPhepNhan.this, BangNhan.class);
                 startActivity(intent);
             }
         });
@@ -29,7 +29,7 @@ public class MenuPhepNhan extends AppCompatActivity {
         nhan1x1chuso.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuPhepNhan.this, Nhan1x1chuso.class);
+                Intent intent = new Intent(MenuPhepNhan.this, NhanMotVoiMotChuSo.class);
                 startActivity(intent);
             }
         });
@@ -38,7 +38,7 @@ public class MenuPhepNhan extends AppCompatActivity {
         nhan2x1ChuSo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuPhepNhan.this, Nhan2x1chuso.class);
+                Intent intent = new Intent(MenuPhepNhan.this, NhanHaiVoiMotChuSo.class);
                 startActivity(intent);
             }
         });
@@ -47,7 +47,7 @@ public class MenuPhepNhan extends AppCompatActivity {
         nhan2x2ChuSo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuPhepNhan.this, Nhan2x2chuso.class);
+                Intent intent = new Intent(MenuPhepNhan.this, NhanHaiVoiHaiChuSo.class);
                 startActivity(intent);
             }
         });
@@ -56,7 +56,7 @@ public class MenuPhepNhan extends AppCompatActivity {
         nhan3x1ChuSo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuPhepNhan.this, Nhan3x1chuso.class);
+                Intent intent = new Intent(MenuPhepNhan.this, NhanBaVoiMotChuSo.class);
                 startActivity(intent);
             }
         });

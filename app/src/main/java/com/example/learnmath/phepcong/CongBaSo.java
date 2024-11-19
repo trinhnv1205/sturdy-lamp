@@ -1,4 +1,4 @@
-package com.example.learnmath.phepnhan;
+package com.example.learnmath.phepcong;
 
 import android.widget.Button;
 
@@ -7,7 +7,7 @@ import com.example.learnmath.R;
 
 import java.util.Random;
 
-public class Nhan1x1chuso extends CauHoiActivity {
+public class CongBaSo extends CauHoiActivity {
 
     @Override
     protected int getLayoutResourceId() {
@@ -19,8 +19,9 @@ public class Nhan1x1chuso extends CauHoiActivity {
         Random random = new Random();
         int num1 = random.nextInt(9) + 1; // Range from 1 to 9
         int num2 = random.nextInt(9) + 1; // Range from 1 to 9
-        correctAnswer = num1 * num2;
-        questionText.setText(num1 + " * " + num2 + " = ?");
+        int num3 = random.nextInt(9) + 1; // Range from 1 to 9
+        correctAnswer = num1 + num2 + num3;
+        questionText.setText(num1 + " + " + num2 + " + " + num3 + " = ?");
 
         int correctPosition = random.nextInt(4);
         Button[] buttons = {answer1, answer2, answer3, answer4};
@@ -30,7 +31,7 @@ public class Nhan1x1chuso extends CauHoiActivity {
             } else {
                 int wrongAnswer;
                 do {
-                    wrongAnswer = random.nextInt(81) + 1; // Range from 1 to 81
+                    wrongAnswer = random.nextInt(27) + 3; // Range from 3 to 29
                 } while (wrongAnswer == correctAnswer);
                 buttons[i].setText(String.valueOf(wrongAnswer));
             }

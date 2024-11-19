@@ -1,4 +1,4 @@
-package com.example.learnmath.phepchia;
+package com.example.learnmath.pheptru;
 
 import android.widget.Button;
 
@@ -7,7 +7,7 @@ import com.example.learnmath.R;
 
 import java.util.Random;
 
-public class Chia3_1chuso extends CauHoiActivity {
+public class TruBaVoiMotChuSo extends CauHoiActivity {
 
     @Override
     protected int getLayoutResourceId() {
@@ -21,10 +21,10 @@ public class Chia3_1chuso extends CauHoiActivity {
         do {
             num1 = random.nextInt(900) + 100; // Range from 100 to 999
             num2 = random.nextInt(9) + 1;     // Range from 1 to 9
-        } while (num1 % num2 != 0); // Ensure num1 is divisible by num2
+        } while (num1 < num2); // Ensure num1 is greater than or equal to num2
 
-        correctAnswer = num1 / num2;
-        questionText.setText(num1 + " / " + num2 + " = ?");
+        correctAnswer = num1 - num2;
+        questionText.setText(num1 + " - " + num2 + " = ?");
 
         int correctPosition = random.nextInt(4);
         Button[] buttons = {answer1, answer2, answer3, answer4};
@@ -34,7 +34,7 @@ public class Chia3_1chuso extends CauHoiActivity {
             } else {
                 int wrongAnswer;
                 do {
-                    wrongAnswer = random.nextInt(900) + 1; // Range from 1 to 900
+                    wrongAnswer = random.nextInt(900); // Range from 0 to 899
                 } while (wrongAnswer == correctAnswer);
                 buttons[i].setText(String.valueOf(wrongAnswer));
             }

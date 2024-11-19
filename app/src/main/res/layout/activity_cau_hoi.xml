@@ -36,7 +36,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/echcon"
+                android:src="@drawable/anh_conech"
                 android:scaleType="centerCrop" />
 
             <Button
@@ -45,6 +45,7 @@
                 android:layout_height="match_parent"
                 android:backgroundTint="@android:color/transparent"
                 android:gravity="bottom"
+                android:textAlignment="center"
                 android:text="@string/answer"
                 android:textColor="@color/text_color"
                 android:textSize="20sp" />
@@ -60,7 +61,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/echcon"
+                android:src="@drawable/anh_conho"
                 android:scaleType="centerCrop" />
 
             <Button
@@ -71,6 +72,7 @@
                 android:backgroundTint="@android:color/transparent"
                 android:textColor="@color/text_color"
                 android:gravity="bottom"
+                android:textAlignment="center"
                 android:textSize="20sp" />
         </FrameLayout>
 
@@ -84,7 +86,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/echcon"
+                android:src="@drawable/anh_concua"
                 android:scaleType="centerCrop" />
 
             <Button
@@ -95,6 +97,7 @@
                 android:backgroundTint="@android:color/transparent"
                 android:textColor="@color/text_color"
                 android:gravity="bottom"
+                android:textAlignment="center"
                 android:textSize="20sp" />
         </FrameLayout>
 
@@ -108,7 +111,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/echcon"
+                android:src="@drawable/anh_congau"
                 android:scaleType="centerCrop" />
 
             <Button
@@ -119,6 +122,7 @@
                 android:backgroundTint="@android:color/transparent"
                 android:textColor="@color/text_color"
                 android:gravity="bottom"
+                android:textAlignment="center"
                 android:textSize="20sp" />
         </FrameLayout>
     </GridLayout>

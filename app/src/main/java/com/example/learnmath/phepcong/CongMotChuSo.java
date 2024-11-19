@@ -1,4 +1,4 @@
-package com.example.learnmath.pheptru;
+package com.example.learnmath.phepcong;
 
 import android.widget.Button;
 
@@ -7,7 +7,7 @@ import com.example.learnmath.R;
 
 import java.util.Random;
 
-public class Trubaso extends CauHoiActivity {
+public class CongMotChuSo extends CauHoiActivity {
 
     @Override
     protected int getLayoutResourceId() {
@@ -17,15 +17,10 @@ public class Trubaso extends CauHoiActivity {
     @Override
     protected void generateQuestion() {
         Random random = new Random();
-        int num1, num2, num3;
-        do {
-            num1 = random.nextInt(90) + 10; // Range from 10 to 99
-            num2 = random.nextInt(90) + 10; // Range from 10 to 99
-            num3 = random.nextInt(90) + 10; // Range from 10 to 99
-        } while (num1 < num2 + num3); // Ensure num1 is greater than or equal to the sum of num2 and num3
-
-        correctAnswer = num1 - num2 - num3;
-        questionText.setText(num1 + " - " + num2 + " - " + num3 + " = ?");
+        int num1 = random.nextInt(9) + 1; // Range from 1 to 9
+        int num2 = random.nextInt(9) + 1; // Range from 1 to 9
+        correctAnswer = num1 + num2;
+        questionText.setText(num1 + " + " + num2 + " = ?");
 
         int correctPosition = random.nextInt(4);
         Button[] buttons = {answer1, answer2, answer3, answer4};
@@ -35,10 +30,12 @@ public class Trubaso extends CauHoiActivity {
             } else {
                 int wrongAnswer;
                 do {
-                    wrongAnswer = random.nextInt(90); // Range from 0 to 89
+                    wrongAnswer = random.nextInt(18) + 2; // Range from 2 to 19
                 } while (wrongAnswer == correctAnswer);
                 buttons[i].setText(String.valueOf(wrongAnswer));
             }
         }
     }
+
+
 }

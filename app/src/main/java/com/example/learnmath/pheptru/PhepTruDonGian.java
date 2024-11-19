@@ -1,4 +1,4 @@
-package com.example.learnmath.phepchia;
+package com.example.learnmath.pheptru;
 
 import android.widget.Button;
 
@@ -7,7 +7,7 @@ import com.example.learnmath.R;
 
 import java.util.Random;
 
-public class Chia2_2chuso extends CauHoiActivity {
+public class PhepTruDonGian extends CauHoiActivity {
 
     @Override
     protected int getLayoutResourceId() {
@@ -17,14 +17,12 @@ public class Chia2_2chuso extends CauHoiActivity {
     @Override
     protected void generateQuestion() {
         Random random = new Random();
-        int num1, num2;
-        do {
-            num1 = random.nextInt(90) + 10; // Range from 10 to 99
-            num2 = random.nextInt(90) + 10; // Range from 10 to 99
-        } while (num1 % num2 != 0); // Ensure num1 is divisible by num2
-
-        correctAnswer = num1 / num2;
-        questionText.setText(num1 + " / " + num2 + " = ?");
+        int[] factors1 = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, 300, 400, 500, 600, 700, 800, 900};
+        int[] factors2 = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, 300, 400, 500, 600, 700, 800, 900};
+        int num1 = factors1[random.nextInt(factors1.length)];
+        int num2 = factors2[random.nextInt(factors2.length)];
+        correctAnswer = num1 - num2;
+        questionText.setText(num1 + " - " + num2 + " = ?");
 
         int correctPosition = random.nextInt(4);
         Button[] buttons = {answer1, answer2, answer3, answer4};
@@ -34,7 +32,7 @@ public class Chia2_2chuso extends CauHoiActivity {
             } else {
                 int wrongAnswer;
                 do {
-                    wrongAnswer = random.nextInt(90) + 1; // Range from 1 to 90
+                    wrongAnswer = random.nextInt(100000) + 1; // Range from 1 to 100000
                 } while (wrongAnswer == correctAnswer);
                 buttons[i].setText(String.valueOf(wrongAnswer));
             }

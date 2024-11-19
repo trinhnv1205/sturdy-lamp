@@ -20,7 +20,7 @@ public class MenuPhepChia extends AppCompatActivity {
         BangChia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuPhepChia.this, Bangchia.class);
+                Intent intent = new Intent(MenuPhepChia.this, com.example.learnmath.phepchia.BangChia.class);
                 startActivity(intent);
             }
         });
@@ -29,7 +29,7 @@ public class MenuPhepChia extends AppCompatActivity {
         Chia1ChuSo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuPhepChia.this, Chia1_1chuso.class);
+                Intent intent = new Intent(MenuPhepChia.this, ChiaMotVoiMotChuSo.class);
                 startActivity(intent);
             }
         });
@@ -38,7 +38,7 @@ public class MenuPhepChia extends AppCompatActivity {
         Chia2ChuSo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuPhepChia.this, Chia2_1chuso.class);
+                Intent intent = new Intent(MenuPhepChia.this, ChiaHaiVoiMotChuSo.class);
                 startActivity(intent);
             }
         });
@@ -47,7 +47,7 @@ public class MenuPhepChia extends AppCompatActivity {
         ChiaSoHaiDonVi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuPhepChia.this, Chia2_2chuso.class);
+                Intent intent = new Intent(MenuPhepChia.this, ChiaHaiVoiHaiChuSo.class);
                 startActivity(intent);
             }
         });
@@ -57,7 +57,7 @@ public class MenuPhepChia extends AppCompatActivity {
         ChiaBaSo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuPhepChia.this, Chia3_1chuso.class);
+                Intent intent = new Intent(MenuPhepChia.this, ChiaBaVoiMotChuSo.class);
                 startActivity(intent);
             }
         });

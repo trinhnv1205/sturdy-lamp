@@ -23,38 +23,38 @@
         </activity>
 
         <activity android:name=".pheptru.MenuPhepTru" />
-        <activity android:name=".pheptru.Bangtru" />
-        <activity android:name=".pheptru.Tru1_1chuso" />
-        <activity android:name=".pheptru.Tru2_1chuso" />
-        <activity android:name=".pheptru.Tru2_2chuso" />
-        <activity android:name=".pheptru.Tru3_1chuso" />
-        <activity android:name=".pheptru.Trubaso" />
-        <activity android:name=".pheptru.Pheptrudongian" />
+        <activity android:name=".pheptru.BangTru" />
+        <activity android:name=".pheptru.TruMotVoiMotChuSo" />
+        <activity android:name=".pheptru.TruHaiVoiMotChuSo" />
+        <activity android:name=".pheptru.TruHaiVoiHaiChuSo" />
+        <activity android:name=".pheptru.TruBaVoiMotChuSo" />
+        <activity android:name=".pheptru.TruBaSo" />
+        <activity android:name=".pheptru.PhepTruDonGian" />
 
 
         <activity android:name=".phepnhan.MenuPhepNhan" />
-        <activity android:name=".phepnhan.Bangnhan" />
-        <activity android:name=".phepnhan.Nhan1x1chuso" />
-        <activity android:name=".phepnhan.Nhan2x1chuso" />
-        <activity android:name=".phepnhan.Nhan3x1chuso" />
-        <activity android:name=".phepnhan.Nhan2x2chuso" />
+        <activity android:name=".phepnhan.BangNhan" />
+        <activity android:name=".phepnhan.NhanMotVoiMotChuSo" />
+        <activity android:name=".phepnhan.NhanHaiVoiMotChuSo" />
+        <activity android:name=".phepnhan.NhanBaVoiMotChuSo" />
+        <activity android:name=".phepnhan.NhanHaiVoiHaiChuSo" />
         <activity android:name=".phepnhan.PhepNhanDonGian" />
 
         <activity android:name=".phepchia.MenuPhepChia" />
-        <activity android:name=".phepchia.Bangchia" />
-        <activity android:name=".phepchia.Chia1_1chuso" />
-        <activity android:name=".phepchia.Chia2_1chuso" />
-        <activity android:name=".phepchia.Chia2_2chuso" />
-        <activity android:name=".phepchia.Chia3_1chuso" />
+        <activity android:name=".phepchia.BangChia" />
+        <activity android:name=".phepchia.ChiaMotVoiMotChuSo" />
+        <activity android:name=".phepchia.ChiaHaiVoiMotChuSo" />
+        <activity android:name=".phepchia.ChiaHaiVoiHaiChuSo" />
+        <activity android:name=".phepchia.ChiaBaVoiMotChuSo" />
         <activity android:name=".phepchia.PhepChiaDonGian" />
 
         <activity android:name=".sosanh.PhepSoSanhActivity" />
 
         <activity android:name=".phepcong.PhepCongLienTiepActivity" />
-        <activity android:name=".phepcong.Cong1chuso" />
-        <activity android:name=".phepcong.Cong2chuso" />
-        <activity android:name=".phepcong.Cong3chuso" />
-        <activity android:name=".phepcong.Cong3so" />
+        <activity android:name=".phepcong.CongMotChuSo" />
+        <activity android:name=".phepcong.CongHaiChuSo" />
+        <activity android:name=".phepcong.CongBaChuSo" />
+        <activity android:name=".phepcong.CongBaSo" />
         <activity android:name=".phepcong.PhepCongDonGian" />
         <activity android:name=".phepcong.MenuPhepCong" />
 

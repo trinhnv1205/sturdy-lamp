@@ -1,24 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="371dp"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:padding="16dp">
+    android:layout_marginTop="25dp"
+    android:padding="16dp"
+    android:layout_margin="16dp"
+    android:background="@drawable/bg_border">
 
     <TextView
         android:id="@+id/name_text_view"
-        android:layout_width="0dp"
+        style="@style/NameTextViewStyle"
+        android:layout_width="124dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="@string/ten"
         android:textSize="16sp"
-        style="@style/NameTextViewStyle" />
+        android:gravity="center"/>
 
     <TextView
         android:id="@+id/score_text_view"
-        android:layout_width="wrap_content"
+        style="@style/ScoreTextViewStyle"
+        android:layout_width="102dp"
         android:layout_height="wrap_content"
         android:text="@string/diem"
         android:textSize="16sp"
-        style="@style/ScoreTextViewStyle" />
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/time_text_view"
+        style="@style/TimeTextViewStyle"
+        android:layout_width="140dp"
+        android:layout_height="match_parent"
+        android:text="@string/thoi_gian"
+        android:textSize="16sp"
+        android:gravity="center"/>
+
 </LinearLayout>

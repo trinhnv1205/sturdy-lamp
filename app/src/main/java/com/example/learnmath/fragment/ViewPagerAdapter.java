@@ -16,7 +16,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 1:
-                return new XepHangFragment();
+                return new LichSuLamBaiFragment();
             case 2:
                 return new CaiDatFragment();
             default:

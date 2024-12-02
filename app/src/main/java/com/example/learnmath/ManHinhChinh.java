@@ -14,8 +14,8 @@ import androidx.room.Room;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.learnmath.fragment.ViewPagerAdapter;
-import com.example.learnmath.thucthe.CoSoDuLieu;
 import com.example.learnmath.thucthe.CaiDatTable;
+import com.example.learnmath.thucthe.CoSoDuLieu;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class ManHinhChinh extends AppCompatActivity {
@@ -36,9 +36,13 @@ public class ManHinhChinh extends AppCompatActivity {
                 runOnUiThread(() -> {
                     // Apply settings (e.g., enable/disable music)
                     if (caiDatTable.musicEnabled) {
-                        mediaPlayer.start();
+                        if (!mediaPlayer.isPlaying()) {
+                            mediaPlayer.start();
+                        }
                     } else {
-                        mediaPlayer.pause();
+                        if (mediaPlayer.isPlaying()) {
+                            mediaPlayer.pause();
+                        }
                     }
                 });
             }
@@ -53,7 +57,7 @@ public class ManHinhChinh extends AppCompatActivity {
         database = Room.databaseBuilder(getApplicationContext(), CoSoDuLieu.class, "app_database").build();
 
         // Initialize MediaPlayer and start playing background music
-        mediaPlayer = MediaPlayer.create(this, R.raw.bg);
+        mediaPlayer = MediaPlayer.create(this, R.raw.nhacnenapp);
         mediaPlayer.setLooping(true); // Set looping
         setContentView(R.layout.activity_man_hinh_chinh);
 
@@ -110,5 +114,11 @@ public class ManHinhChinh extends AppCompatActivity {
                 return false;
             }
         });
+    }
+
+    @Override
+    protected void onDestroy() {
+        database.close();
+        super.onDestroy();
     }
 }

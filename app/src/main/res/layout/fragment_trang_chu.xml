@@ -1,191 +1,211 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/trangchu"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/orange"
-    tools:context=".fragment.TrangChuFragment">
-    <View
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:background="@drawable/anh_toolbar"
-        android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        />
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="250dp"
-        android:background="@color/white"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:src="@drawable/anh_behoctoan"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="16dp"/>
 
         <LinearLayout
-            android:layout_width="394dp"
-            android:layout_height="120dp"
-            android:gravity="center">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
 
             <LinearLayout
                 android:id="@+id/addition_button"
-                android:layout_width="170dp"
+                android:layout_width="0dp"
                 android:layout_height="100dp"
+                android:layout_weight="1"
                 android:layout_margin="8dp"
                 android:background="@drawable/item_background_square"
                 android:backgroundTint="@color/red_200"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:padding="8dp">
+                android:padding="8dp"
+                android:elevation="4dp">
 
                 <ImageView
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:src="@drawable/ic_addition" />
+                    android:src="@drawable/ic_addition"
+                    android:contentDescription="@string/addition" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/addition"
                     android:textColor="@color/text_color"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:fontFamily="sans-serif-medium" />
             </LinearLayout>
 
-            <!-- Subtraction -->
             <LinearLayout
                 android:id="@+id/subtraction_button"
-                android:layout_width="170dp"
+                android:layout_width="0dp"
                 android:layout_height="100dp"
+                android:layout_weight="1"
                 android:layout_margin="8dp"
                 android:background="@drawable/item_background_square"
                 android:backgroundTint="@color/green_200"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:padding="8dp">
+                android:padding="8dp"
+                android:elevation="4dp">
 
                 <ImageView
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:src="@drawable/ic_subtraction" />
+                    android:src="@drawable/ic_subtraction"
+                    android:contentDescription="@string/subtraction" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/subtraction"
                     android:textColor="@color/text_color"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:fontFamily="sans-serif-medium" />
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="394dp"
-            android:layout_height="120dp"
-            android:gravity="center">
-            <!-- Multiplication -->
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
+
             <LinearLayout
                 android:id="@+id/multiplication_button"
-                android:layout_width="170dp"
+                android:layout_width="0dp"
                 android:layout_height="100dp"
+                android:layout_weight="1"
                 android:layout_margin="8dp"
                 android:background="@drawable/item_background_square"
                 android:backgroundTint="@color/blue_200"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:padding="8dp">
+                android:padding="8dp"
+                android:elevation="4dp">
 
                 <ImageView
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:src="@drawable/ic_multiplication" />
+                    android:src="@drawable/ic_multiplication"
+                    android:contentDescription="@string/multiplication" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/multiplication"
                     android:textColor="@color/text_color"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:fontFamily="sans-serif-medium" />
             </LinearLayout>
-            <!-- Division -->
+
             <LinearLayout
                 android:id="@+id/division_button"
-                android:layout_width="170dp"
+                android:layout_width="0dp"
                 android:layout_height="100dp"
+                android:layout_weight="1"
                 android:layout_margin="8dp"
                 android:background="@drawable/item_background_square"
                 android:backgroundTint="@color/yellow_200"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:padding="8dp">
+                android:padding="8dp"
+                android:elevation="4dp">
 
                 <ImageView
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:src="@drawable/ic_division" />
+                    android:src="@drawable/ic_division"
+                    android:contentDescription="@string/division" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/division"
                     android:textColor="@color/text_color"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:fontFamily="sans-serif-medium" />
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="394dp"
-            android:layout_height="120dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center">
-            <!-- Compare -->
+
             <LinearLayout
                 android:id="@+id/compare_button"
-                android:layout_width="170dp"
+                android:layout_width="0dp"
                 android:layout_height="100dp"
+                android:layout_weight="1"
                 android:layout_margin="8dp"
                 android:background="@drawable/item_background_square"
                 android:backgroundTint="@color/purple_200"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:padding="8dp">
+                android:padding="8dp"
+                android:elevation="4dp">
 
                 <ImageView
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:src="@drawable/ic_compare" />
+                    android:src="@drawable/ic_compare"
+                    android:contentDescription="@string/compare" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/compare"
                     android:textColor="@color/text_color"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:fontFamily="sans-serif-medium" />
             </LinearLayout>
 
-            <!-- Random -->
             <LinearLayout
-                    android:id="@+id/luyentaptoan_button"
-                android:layout_width="170dp"
+                android:id="@+id/luyentaptoan_button"
+                android:layout_width="0dp"
                 android:layout_height="100dp"
+                android:layout_weight="1"
                 android:layout_margin="8dp"
                 android:background="@drawable/item_background_square"
                 android:backgroundTint="@color/orange_200"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:padding="8dp">
+                android:padding="8dp"
+                android:elevation="4dp">
 
                 <ImageView
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:src="@drawable/ic_random" />
+                    android:src="@drawable/ic_random"
+                    android:contentDescription="@string/luyentap" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/luyentap"
                     android:textColor="@color/text_color"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:fontFamily="sans-serif-medium" />
             </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>
-</RelativeLayout>
+</ScrollView>

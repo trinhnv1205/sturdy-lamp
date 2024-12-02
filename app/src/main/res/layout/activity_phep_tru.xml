@@ -1,197 +1,211 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_color"
-    android:gravity="center"
-    android:orientation="vertical"
-    android:padding="16dp">
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="@drawable/anh6">
-
-    </View>
+    android:background="@color/background_color">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
         android:gravity="center">
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:src="@drawable/anh6"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="16dp"/>
 
         <LinearLayout
-            android:id="@+id/Bangtru_button"
-            android:layout_width="180dp"
-            android:layout_height="150dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_margin="8dp"
-            android:background="@drawable/item_background_square"
-            android:backgroundTint="@color/red_200"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center"
-            android:orientation="vertical"
-            android:padding="8dp">
+            android:layout_marginBottom="16dp">
 
-            <ImageView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:src="@drawable/ic_subtraction" />
+            <LinearLayout
+                android:id="@+id/Bangtru_button"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:background="@drawable/item_background_square"
+                android:backgroundTint="@color/red_200"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:elevation="4dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/bang_tru"
-                android:textColor="@color/text_color"
-                android:textSize="18sp" />
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_subtraction"
+                    android:contentDescription="@string/bang_tru" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bang_tru"
+                    android:textColor="@color/text_color"
+                    android:textSize="18sp"
+                    android:fontFamily="sans-serif-medium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Chumotchuso_button"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:background="@drawable/item_background_square"
+                android:backgroundTint="@color/blue_200"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:elevation="4dp">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_hoanghon"
+                    android:contentDescription="@string/tru_mot_chu_so" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tru_mot_chu_so"
+                    android:textColor="@color/text_color"
+                    android:textSize="18sp"
+                    android:fontFamily="sans-serif-medium" />
+            </LinearLayout>
         </LinearLayout>
-
 
         <LinearLayout
-            android:id="@+id/Chumotchuso_button"
-            android:layout_width="180dp"
-            android:layout_height="150dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_margin="8dp"
-            android:background="@drawable/item_background_square"
-            android:backgroundTint="@color/blue_200"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center"
-            android:orientation="vertical"
-            android:padding="8dp">
+            android:layout_marginBottom="16dp">
 
-            <ImageView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:src="@drawable/ic_hoanghon" />
+            <LinearLayout
+                android:id="@+id/Chuhaichuso_button"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:background="@drawable/item_background_square"
+                android:backgroundTint="@color/green_200"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:elevation="4dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tru_mot_chu_so"
-                android:textColor="@color/text_color"
-                android:textSize="18sp" />
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_ngoisao"
+                    android:contentDescription="@string/tru_hai_chu_so" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tru_hai_chu_so"
+                    android:textColor="@color/text_color"
+                    android:textSize="18sp"
+                    android:fontFamily="sans-serif-medium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Trubachuso_button"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:background="@drawable/item_background_square"
+                android:backgroundTint="@color/yellow_200"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:elevation="4dp">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_sun"
+                    android:contentDescription="@string/tru_ba_chu_so" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tru_ba_chu_so"
+                    android:textColor="@color/text_color"
+                    android:textSize="18sp"
+                    android:fontFamily="sans-serif-medium" />
+            </LinearLayout>
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/Trubaso_button"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:background="@drawable/item_background_square"
+                android:backgroundTint="@color/purple_200"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:elevation="4dp">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_mua"
+                    android:contentDescription="@string/tru_ba_so" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tru_ba_so"
+                    android:textColor="@color/text_color"
+                    android:textSize="18sp"
+                    android:fontFamily="sans-serif-medium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Pheptrudongian_button"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:background="@drawable/item_background_square"
+                android:backgroundTint="@color/grey_200"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:elevation="4dp">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_may"
+                    android:contentDescription="@string/Phep_tru_don_gian" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Phep_tru_don_gian"
+                    android:textColor="@color/text_color"
+                    android:textSize="18sp"
+                    android:fontFamily="sans-serif-medium" />
+            </LinearLayout>
+        </LinearLayout>
+
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center">
-
-
-        <LinearLayout
-            android:id="@+id/Chuhaichuso_button"
-            android:layout_width="180dp"
-            android:layout_height="150dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_margin="8dp"
-            android:background="@drawable/item_background_square"
-            android:backgroundTint="@color/green_200"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:padding="8dp">
-
-            <ImageView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:src="@drawable/ic_ngoisao" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tru_hai_chu_so"
-                android:textColor="@color/text_color"
-                android:textSize="18sp" />
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:id="@+id/Trubachuso_button"
-            android:layout_width="180dp"
-            android:layout_height="150dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_margin="8dp"
-            android:background="@drawable/item_background_square"
-            android:backgroundTint="@color/yellow_200"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:padding="8dp">
-
-            <ImageView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:src="@drawable/ic_sun" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tru_ba_chu_so"
-                android:textColor="@color/text_color"
-                android:textSize="18sp" />
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center">
-        <!-- Compare -->
-        <LinearLayout
-            android:id="@+id/Trubaso_button"
-            android:layout_width="180dp"
-            android:layout_height="150dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_margin="8dp"
-            android:background="@drawable/item_background_square"
-            android:backgroundTint="@color/purple_200"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:padding="8dp">
-
-            <ImageView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:src="@drawable/ic_mua" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tru_ba_so"
-                android:textColor="@color/text_color"
-                android:textSize="18sp" />
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:id="@+id/Pheptrudongian_button"
-            android:layout_width="180dp"
-            android:layout_height="150dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_margin="8dp"
-            android:background="@drawable/item_background_square"
-            android:backgroundTint="@color/grey_200"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:padding="8dp">
-
-            <ImageView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:src="@drawable/ic_may" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/Phep_tru_don_gian"
-                android:textColor="@color/text_color"
-                android:textSize="18sp" />
-        </LinearLayout>
-    </LinearLayout>
-
-</LinearLayout>
+</ScrollView>

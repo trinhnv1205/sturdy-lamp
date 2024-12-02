@@ -11,7 +11,7 @@ public class PhepChiaDonGian extends CauHoiActivity {
 
     @Override
     protected int getLayoutResourceId() {
-        return R.layout.activity_cau_hoi;
+        return R.layout.activity_bang_phep_tinh;
     }
 
     @Override

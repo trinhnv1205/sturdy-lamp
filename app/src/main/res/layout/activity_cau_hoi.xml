@@ -6,6 +6,15 @@
     android:padding="16dp"
     android:background="@color/background_color"
     android:gravity="center">
+    <TextView
+        android:id="@+id/feedback_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:padding="16dp"
+        android:text=""
+        android:textColor="@color/text_secondary"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/question_text"
@@ -157,14 +166,5 @@
         android:background="@drawable/rounded_button"
         android:visibility="gone" />
 
-    <TextView
-        android:id="@+id/feedback_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="18sp"
-        android:textColor="@color/text_secondary"
-        android:padding="16dp"
-        android:gravity="center" />
 
 </LinearLayout>

@@ -16,12 +16,12 @@ public class BangNhan extends CauHoiActivity {
 
     @Override
     protected int getLayoutResourceId() {
-        return R.layout.activity_cau_hoi;
+        return R.layout.activity_bang_phep_tinh;
     }
 
     @Override
     protected void generateQuestion() {
-        int baseNumber = 2; // Starting number for multiplication
+        int baseNumber = 1;
         correctAnswer = baseNumber * currentMultiplier;
         questionText.setText(baseNumber + " * " + currentMultiplier + " = ?");
 

@@ -16,7 +16,7 @@ public class BangChia extends CauHoiActivity {
 
     @Override
     protected int getLayoutResourceId() {
-        return R.layout.activity_cau_hoi;
+        return R.layout.activity_bang_phep_tinh;
     }
 
     @Override
@@ -35,7 +35,7 @@ public class BangChia extends CauHoiActivity {
                 int wrongAnswer;
                 do {
                     wrongAnswer = new Random().nextInt(20) + 1;
-                } while (wrongAnswer == correctAnswer);
+                } while (wrongAnswer == correctAnswer || baseNumber % wrongAnswer != 0);
                 buttons[i].setText(String.valueOf(wrongAnswer));
             }
         }

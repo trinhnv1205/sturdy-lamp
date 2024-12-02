@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="371dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_margin="16dp"
+       >
+
+        <TextView
+            android:id="@+id/name_text_view"
+
+            android:layout_width="111dp"
+            android:layout_height="41dp"
+            android:layout_weight="1"
+            android:drawableRight="@drawable/icon_nguoidung"
+            android:gravity="center"
+            android:text="@string/ten"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/score_text_view"
+            style="@style/ScoreTextViewStyle"
+            android:layout_width="104dp"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/icon_diem"
+            android:gravity="center"
+            android:text="@string/diem"
+            android:textStyle="bold"
+            android:textColor="@color/red"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/time_text_view"
+            style="@style/TimeTextViewStyle"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_time"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="@string/thoi_gian"
+            android:textColor="@color/red"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="373dp"
+        android:layout_height="508dp"
+
+        android:layout_margin="16dp"
+        android:scrollbars="vertical" />
+</LinearLayout>

@@ -11,8 +11,8 @@ import androidx.fragment.app.Fragment;
 import androidx.room.Room;
 
 import com.example.learnmath.R;
-import com.example.learnmath.thucthe.CoSoDuLieu;
 import com.example.learnmath.thucthe.CaiDatTable;
+import com.example.learnmath.thucthe.CoSoDuLieu;
 
 public class CaiDatFragment extends Fragment {
 
@@ -20,20 +20,21 @@ public class CaiDatFragment extends Fragment {
     private Switch switchMusic;
     private MediaPlayer mediaPlayer;
 
+    // Tạo view cho fragment cài đặt
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+        //chuyển layout thành view
         View view = inflater.inflate(R.layout.fragment_cai_dat, container, false);
 
         switchMusic = view.findViewById(R.id.nhacnen);
 
         database = Room.databaseBuilder(getContext(), CoSoDuLieu.class, "app_database").build();
 
-        // Initialize MediaPlayer
-        mediaPlayer = MediaPlayer.create(getContext(), R.raw.bg);
+        // tạo đối tượng MediaPlayer để phát nhạc nền
+        mediaPlayer = MediaPlayer.create(getContext(), R.raw.nhacnenapp);
         mediaPlayer.setLooping(true);
 
-        // Load the current settings
+        // Lấy cài đặt từ cơ sở dữ liệu và cập nhật trạng thái của switch
         new Thread(() -> {
             CaiDatTable caiDatTable = database.settingsDao().getSettings(1);
             if (caiDatTable != null) {
@@ -46,6 +47,7 @@ public class CaiDatFragment extends Fragment {
             }
         }).start();
 
+        // Sự kiện khi người dùng thay đổi trạng thái của switch
         switchMusic.setOnCheckedChangeListener((buttonView, isChecked) -> {
             new Thread(() -> {
                 CaiDatTable caiDatTable = new CaiDatTable();
@@ -64,5 +66,11 @@ public class CaiDatFragment extends Fragment {
         });
 
         return view;
+    }
+
+    @Override
+    public void onDestroy() {
+        database.close();
+        super.onDestroy();
     }
 }

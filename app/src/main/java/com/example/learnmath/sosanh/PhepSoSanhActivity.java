@@ -11,7 +11,7 @@ public class PhepSoSanhActivity extends CauHoiActivity {
 
     @Override
     protected int getLayoutResourceId() {
-        return R.layout.activity_cau_hoi;
+        return R.layout.activity_bang_phep_tinh;
     }
 
     @Override
@@ -46,5 +46,16 @@ public class PhepSoSanhActivity extends CauHoiActivity {
                 buttons[i].setText(wrongAnswer);
             }
         }
+    }
+
+    public boolean isAnswerCorrect(String selectedAnswer) {
+        if (selectedAnswer.equals(">") && correctAnswer == 1) {
+            return true;
+        } else if (selectedAnswer.equals("<") && correctAnswer == -1) {
+            return true;
+        } else if (selectedAnswer.equals("=") && correctAnswer == 0) {
+            return true;
+        }
+        return false;
     }
 }

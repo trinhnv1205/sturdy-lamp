@@ -11,8 +11,8 @@ android {
         applicationId = "com.example.learnmath"
         minSdk = 24
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "1.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -51,9 +51,9 @@ dependencies {
 
     implementation ("androidx.room:room-runtime:2.4.2")
     implementation(libs.androidx.preference)
-    implementation(libs.androidx.recyclerview)
     annotationProcessor ("androidx.room:room-compiler:2.4.2")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation(kotlin("script-runtime"))
 }
